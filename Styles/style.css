@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegacion */
+
+.navbar {
+    background-color: #333333;
+}
+
+.navbar-brand {
+    color: #FFD700;
+}
+
+.navbar-toggler {
+    color: #FFD700;
+}
+
+.navbar-toggler-icon {
+    background-color: #FFD700;
+}
+
+.lista li a {
+    color: #FFD700;
+}
+
+.dropdown-menu {
+    background-color: #333333;
+}
+
+.main-container {
+    background-color: gray;
+}
+
+/* Carrusel */
+
+/* .carousel-inner {
+    padding: 20px;
+} */
+
+/* .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+} */
+
+
+/* .carousel-item {
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+} */
+
+/* .carousel-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
+} */
+
+.carousel-caption .intro {
+    background-color: black;
+    color: #ccc;
+}
+
+/* Introduccion */
+.introduction {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.introduction h2 {
+    font-size: 28px;
+    margin: 20px 0px;
+}
+
+.introduction p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0px 30px 20px 30px;
+    text-align: justify;
+}
+
+/* Xbox */
+
+.xbox-container {
+    background-color: #107c10;
+}
+
+.video-xbox {
+    padding: 20px;
+    /* background-color: #107c10; */
+    margin-bottom: 10px;
+}
+
+.games-xbox {
+    /* margin: 0px 10px; */
+    padding: 0px 25px 15px 25px;
+}
+
+.games-xbox a {
+    padding: 10px 100px;
+}
+
+/* PlayStation */
+
+.playstation-container {
+    background-color: #0070D1;
+}
+
+.video-playstation {
+    padding: 20px;
+    /* background-color: #0070D1; */
+}
+
+.games-playstation {
+    /* margin: 0px 10px; */
+    padding: 0px 25px 15px 25px;
+}
+
+.games-playstation a {
+    padding: 10px 100px;
+}
+
+/* Tarjetas */
+
+.card {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* Whatsapp para contacto */
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right:30px;
+    background-color: rgb(71, 247, 71);
+    border-radius: 20px;
+}
+
+.whatsapp a {
+    color:green;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.whatsapp a svg {
+    width: 40px;
+    color:green;
+    filter: drop-shadow(0 1px 4px green);
+}
+
+/* footer */
+
+.list-unstyled li a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.list-unstyled li a:hover {
+    color: #FFD700;
+}
+
+.fb, .in, .yt {
+    padding: 8px;
+    border-radius: 10px;
+    /* display: block;
+    width: 120px; */
+    text-align: center;
+}
+
+.fb {
+    background: rgb(0, 81, 255);
+}
+
+.in {
+    /* background: #d6249f; */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.yt {
+    background: rgb(255, 0, 0);
+}
+
+.copy-container a {
+    text-decoration: none;
+}
+
+
+/* Breakpoints para responsive */
+
+@media (min-width: 576px) {
+    /* nav */
+    .buscador {
+        margin-bottom: 10px;
+    }
+
+    /* carrusel */
+    .carousel-item img {
+        height: 322px;
+        object-fit: cover;
+    }
+
+    /* .games-xbox {
+        margin: 0px 50px;
+        padding-bottom: 10px;
+        padding: 0px 30px;
+    } */
+
+    .card img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 992px) {
+    /* nav */
+    .buscador {
+        margin-bottom: 0;
+    }
+
+    /* carrusel */
+    .carousel-caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carousel-caption .intro {
+        width: 60%;
+    }
+
+    .carousel-item img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .card-play {
+        height: 450px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-play {
+        height: 400px;
+    }
+}
