@@ -28,5 +28,13 @@ p, ol, li {
 
 .list-group-item {
     border: 1px solid #777; /* Borde sutil para elementos de la lista */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); Sombra sutil */
+    box-shadow: 2px 2px 5px rgba(82, 194, 52, 0.5);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+    transform: scale(1.03);
 }
