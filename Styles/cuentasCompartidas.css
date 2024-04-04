@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #52c234; 
+    background: -webkit-linear-gradient(to right, #061700, #52c234);  
+    background: linear-gradient(to right, #061700, #52c234); 
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #fff; /* Color blanco para títulos */
+}
+
+p, ol, li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.list-group-item {
+    border: 1px solid #777; /* Borde sutil para elementos de la lista */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
