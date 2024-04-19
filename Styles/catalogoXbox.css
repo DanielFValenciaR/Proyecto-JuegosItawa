@@ -11,13 +11,18 @@
     background-repeat: no-repeat;
     background-size: cover; */
 
-.main-container {
+body {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+/* Tarjetas */
+
+.cards-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
     /* background: linear-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1); */
 }
 
@@ -41,7 +46,7 @@
 }
 
 .card .front {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(0deg);
     box-shadow: 0 5px 10px #000;
 }
 
@@ -63,7 +68,7 @@
 } */
 
 .card .back {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
     background: rgb(3, 35, 54);
     padding: 12px;
     color: #f3f3f3;
@@ -96,3 +101,55 @@
     transform: perspective(600px) rotateY(360deg);
 }
 
+/* Paginacion */
+
+.paginacion {
+    text-align: center;
+    /* padding: 5px 0; */
+    margin: 50px 30px 60px;
+    user-select: none;
+}
+
+.paginacion .page-item {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 50%);
+    border: transparent;
+}
+
+.paginacion .page-item .page-link {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 45px;
+    text-decoration: none;
+}
+
+.previous-page, .next-page {
+    background: #0AB1CF;
+    border-radius: 45px;
+    transition: 0.3s ease;
+    width: 80px;
+    cursor: pointer;
+}
+
+.previous-page:hover {
+    transform: translateX(-5px);
+}
+
+.next-page:hover {
+    transform: translateX(5px);
+}
+
+.current-page, .dots {
+    background: #CCC;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.active {
+    background: #0AB1CF;
+}
+
+.disable {
+    background: #CCC;
+}
