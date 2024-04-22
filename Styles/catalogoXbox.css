@@ -12,8 +12,49 @@
     background-size: cover; */
 
 body {
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    background: linear-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
+    background: -webkit-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
+    background: -moz-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
+    background: -o-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
+
 }
+
+.intro-container h1 {
+    margin: 15px auto 30px;
+}
+
+.intro-container p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.intro-container a {
+    text-decoration: none;
+    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Define un gradiente como fondo */
+    -webkit-background-clip: text; /* Indica que el fondo se aplique solo al texto */
+    background-clip: text; /* Para navegadores que no soportan la versión con prefijo -webkit- */
+    color: transparent; /* Hace que el color del texto sea transparente */
+    animation: snakeColorMove 5s linear infinite; /* Define la animación para mover el color */
+}
+
+@keyframes snakeColorMove {
+    0% {
+        -webkit-text-fill-color: #045c04; /* Color inicial del texto */
+        background-position: 0%; /* Mueve el gradiente a la izquierda */
+    }
+    50% {
+        -webkit-text-fill-color: #00ff00; /* Color intermedio del texto */
+        background-position: 50%; /* Mueve el gradiente al centro */
+    }
+    100% {
+        -webkit-text-fill-color: #1af33e; /* Color final del texto */
+        background-position: 100%; /* Mueve el gradiente a la derecha */
+    }
+}
+
+/* .intro-container a:hover {
+    color: green;
+} */
 
 /* Tarjetas */
 
@@ -117,6 +158,11 @@ body {
     border: transparent;
 }
 
+.paginacion .page-item:not(.active):hover {
+    background-color: gray; 
+}
+
+
 .paginacion .page-item .page-link {
     color: #fff;
     font-size: 1.2em;
@@ -153,3 +199,4 @@ body {
 .disable {
     background: #CCC;
 }
+
