@@ -38,14 +38,39 @@ function getPageList(totalPages, page, maxLength) {
 
 document.addEventListener("DOMContentLoaded", function() {
     let numberOfItems = document.querySelectorAll(".cards-container .card").length;
-    let limitPerPage = 9; // Cuantas tarjetas visibles por página
+    let limitPerPage = getLimitPerPage(); // Cuantas tarjetas visibles por página
     let totalPages = Math.ceil(numberOfItems / limitPerPage);
-    let paginationSize = 7; // Cuantos elementos visibles en la paginación
-    let currentPage;
+    let paginationSize = getPaginationSize(); // Cuantos elementos visibles en la paginación
+
+    // Obtener el número de página actual de la URL
+    let urlParams = new URLSearchParams(window.location.search);
+    let currentPage = parseInt(urlParams.get('page')) || 1;
+
+    function getLimitPerPage() {
+        // Calcular el límite de tarjetas por página según el tamaño de la pantalla
+        if (window.innerWidth < 1200) {
+            return 8; // Si la pantalla es mediana, mostrar 8 tarjetas por página
+        } else {
+            return 9; // Si la pantalla es grande, mostrar 9 tarjetas por página
+        }
+    };
+
+    function getPaginationSize() {
+        if (window.innerWidth < 768) {
+            return 5; 
+        } else if (window.innerWidth <= 992) {
+            return 7;
+        } else {
+            return 9;
+        }
+    };
 
     function showPage(wichPage) {
         if (wichPage < 1 || wichPage > totalPages) return false;
         currentPage = wichPage;
+
+        // Actualizar la URL con el número de página actual
+        history.pushState(null, null, `?page=${currentPage}`);
 
         // Desplazar la página hacia arriba con un desplazamiento más suave
         window.scrollTo({
@@ -53,19 +78,46 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: "smooth", // Desplazamiento suave
         });
 
+        // Ocultar todos los iframes de YouTube
+        let youtubeIframes = document.querySelectorAll(".cards-container .card iframe");
+        youtubeIframes.forEach(function(iframe) {
+            iframe.setAttribute("loading", "lazy");
+            iframe.removeAttribute("src");
+        });
+
         // $(".cards-container .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
-        let cards = document.querySelectorAll(".cards-container .card");
         let startIndex = (currentPage - 1) * limitPerPage;
         let endIndex = currentPage * limitPerPage;
 
+        let cards = Array.from(document.querySelectorAll(".cards-container .card"));
+
+        // Ordenar las tarjetas según el valor del atributo data-launch
+        cards.sort(function(a, b) {
+            return new Date(b.dataset.launch) - new Date(a.dataset.launch);
+        });
+
         cards.forEach(function (card, index) {
             if (index >= startIndex && index < endIndex) {
-            card.style.display = "block";
+                cardsContainer.appendChild(card);
+                card.style.display = "block";
+
+                let iframe = card.querySelector("iframe");
+                let videoUrl = card.dataset.video; // Obtener la URL del video de YouTube almacenada en el atributo data-video de la tarjeta
+                if (iframe && videoUrl) {
+                    iframe.setAttribute("src", videoUrl);
+                }
+
             } else {
-            card.style.display = "none";
+                card.style.display = "none";
             }
         });
 
+        updatePagination();
+
+        return true;
+    };
+
+    function updatePagination() {
         // $("paginacion li").slice(1, -1).remove();
         let paginationItems = document.querySelectorAll(".paginacion li");
 
@@ -74,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
             paginationItems[i].parentNode.removeChild(paginationItems[i]);
         }
 
+         // Actualizar la lista de páginas en la paginación
         getPageList(totalPages, currentPage, paginationSize).forEach(item => {
             // $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === currentPage).append($("<a>")
             // .addClass("page-link").attr({href: "javascript:void(0)"}).text(item || "...")).insertBefore(".next-page");
@@ -112,6 +165,8 @@ document.addEventListener("DOMContentLoaded", function() {
             nextPageElement.parentNode.insertBefore(liElement, nextPageElement);
         });
 
+        // Desactivar/activar los botones de página anterior y siguiente según la página actual
+
         // $(".previous-page").toggleClass("disable", currentPage === 1);
         let previousPageElement = document.querySelector(".previous-page");
         previousPageElement.classList.toggle("disable", currentPage === 1);
@@ -119,8 +174,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // $(".next-page").toggleClass("disable", currentPage === totalPages);
         let nextPageElement = document.querySelector(".next-page");
         nextPageElement.classList.toggle("disable", currentPage === totalPages);
-
-        return true;
     };
 
     // $(".paginacion").append(
@@ -128,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //     $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text(">"))
     // );
 
-    // Crear elementos y configurar atributos y clases
+    // Crear elementos y configurar atributos y clases para los botones de página anterior y siguiente
     let previousPageListItem = document.createElement("li");
     previousPageListItem.classList.add("page-item");
     previousPageListItem.classList.add("previous-page");
@@ -147,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
     nextPageLink.setAttribute("href", "javascript:void(0)");
     nextPageLink.textContent = ">";
 
-    // Adjuntar elementos
+    // Adjuntar elementos para los botones de página anterior y siguiente
     previousPageListItem.appendChild(previousPageLink);
     nextPageListItem.appendChild(nextPageLink);
 
@@ -159,19 +212,22 @@ document.addEventListener("DOMContentLoaded", function() {
     let cardsContainer = document.querySelector(".cards-container");
     cardsContainer.style.display = "flex";
 
-    showPage(1);
+    showPage(currentPage);
 
     /*$(document).on("click", ".paginacion li.current-page:not(.active)", function() {
         return showPage(+$(this).text());
     })*/
 
+    // Manejar eventos de clic en los enlaces de paginación para cambiar de página
     document.addEventListener("click", function(event) {
         // Verificar si el clic ocurrió en un elemento <a> dentro de un <li> con la clase "current-page"
         if (event.target.matches(".paginacion li.current-page:not(.active) a")) {
             console.log("Elemento clicado:", event.target.parentElement); // El elemento <li> padre del <a> clicado
+
             // Obtener el número de página del texto del elemento <a> clicado
             let pageNumber = +event.target.textContent;
             console.log("Número de página:", pageNumber); // Mostrar el número de página
+
             // Llamar a la función showPage con el número de página
             return showPage(pageNumber);
         }
@@ -181,11 +237,13 @@ document.addEventListener("DOMContentLoaded", function() {
     //     return showPage(currentPage + 1);
     // });
 
+     // Manejar evento de clic en el botón de página siguiente
     let nextPageElement = document.querySelector(".next-page");
     nextPageElement.addEventListener("click", function() {
         return showPage(currentPage + 1);
     });
 
+    // Manejar evento de clic en el botón de página anterior
     let previousPageElement = document.querySelector(".previous-page");
     previousPageElement.addEventListener("click", function() {
         return showPage(currentPage - 1);
