@@ -7,6 +7,9 @@
     <title>Juegos Digitales Itawa</title>
     <link rel="stylesheet" href="./Library/Bootstrap-5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Styles/style.css">
 </head>
 
@@ -14,9 +17,8 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/index.html">
                     <img src="/Styles/Images/Logo/logo.svg" alt="Logo" width="90" height="60" class="d-inline-block align-text-top">
-                    JuegosITAWA
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -24,9 +26,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 align-items-sm-center lista">
+                    <ul class="navbar-nav m-auto mb-3 mb-lg-0 align-items-sm-center">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -39,7 +41,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <!-- <li><a class="dropdown-item" href="#">Códigos Digitales</a></li> -->
-                                <li><a class="dropdown-item" href="#">Catálogo Xbox</a></li>
+                                <li><a class="dropdown-item" href="./Views/catalogoXbox.html">Catálogo Xbox</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -50,18 +52,18 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Catálogo PlayStation 4/5</a></li>
+                                    <li><a class="dropdown-item" href="./Views/catalogoPlay.html">Catálogo PlayStation 4-5</a></li>
                                 </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                            <a class="nav-link" href="#intro">Acerca de nosotros</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li> -->
                     </ul>
                     <form class="d-flex buscador" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Busca tu juego" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar juego" aria-label="Search">
                         <button class="boton">Buscar</button>
                     </form>
                 </div>
@@ -81,27 +83,28 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./Styles/Images/Carousel/videogames.png" class="d-block w-100"
+                    <img src="./Styles/Images/Carousel/portada.jpg" class="d-block w-100"
                         alt="Imagen de consola retro">
                     <div class="carousel-caption">
-                        <h5 class="intro">Los mejores Videojuegos Digitales los encuentras en JuegosItawa</h5>
+                        <h5>Los mejores Videojuegos Digitales los encuentras en <i><u>JuegosItawa</u></i></h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Styles/Images/Carousel/xbox.png" class="d-block w-100" alt="Imagen exclusivos Xbox">
+                    <img src="./Styles/Images/Carousel/Xbox.jpg" class="d-block w-100" 
+                        alt="Imagen exclusivos Xbox">
                     <div class="carousel-caption">
-                        <h5>Videojuegos Xbox</h5>
-                        <p>Manejamos tanto Cuentas Compartidas como Códigos Digitales</p>
-                        <p><a href="#" class="btn btn-primary mt-3">Leer más</a></p>
+                        <h5><b>Videojuegos Xbox</b></h5>
+                        <p>Manejamos Cuentas Compartidas</p>
+                        <p><a href="./Views/cuentasCompartidas.html" class="btn btn-success mt-3">Leer más</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Styles/Images/Carousel/playstation.png" class="d-block w-100"
+                    <img src="./Styles/Images/Carousel/Playstation.jpg" class="d-block w-100"
                         alt="Imagen exclusivos PlayStation">
                     <div class="carousel-caption">
-                        <h5>Videojuegos PlayStation</h5>
-                        <p>Manejamos tanto Cuentas Principales como Cuentas Secundarias</p>
-                        <p><a href="#" class="btn btn-primary mt-3">Leer más</a></p>
+                        <h5><b>Videojuegos PlayStation</b></h5>
+                        <p>Manejamos Cuentas Principales como Cuentas Secundarias</p>
+                        <p><a href="./Views/cuentasPrincipalesSecundarias.html" class="btn btn-primary mt-3">Leer más</a></p>
                     </div>
                 </div>
             </div>
@@ -116,8 +119,8 @@
             </button>
         </div>
 
-        <section class="introduction">
-            <h2 class="text-center">¡Bienvenidos a JuegosITAWA!</h2>
+        <section class="introduction" id="intro">
+            <h1 class="text-center">¡Bienvenidos a JuegosITAWA!</h1>
             <p>Somos un equipo de apasionados por los videojuegos, unidos por el deseo de brindar una experiencia segura
                 y emocionante
                 a nuestros clientes. Con sede en la encantadora ciudad de Manizales, Colombia, nos enorgullece presentar
@@ -127,35 +130,33 @@
                 más exigentes.
             </p>
             <p>
-                En JuegosITAWA, comprendemos la importancia de la confianza y la transparencia en el mundo de los
-                videojuegos en línea.
+                En JuegosITAWA, comprendemos la importancia de la confianza y la transparencia en el mundo gaming.
                 Como familia con una pasión compartida por los videojuegos, nos hemos comprometido a garantizar la
                 seguridad y la
-                satisfacción de nuestros clientes en cada paso del camino. Desde la selección cuidadosa de nuestro
+                satisfacción de nuestros clientes en cada paso del proceso. Desde la selección cuidadosa de nuestro
                 catálogo hasta la
                 atención personalizada al cliente, cada decisión que tomamos está impulsada por nuestro compromiso
                 inquebrantable con la
                 calidad y la excelencia.
             </p>
-            <h5 class="text-center">¡Gracias por elegir JuegosITAWA, donde la diversión y la seguridad van de la mano!
-            </h5>
+            <h3 class="text-center">¡Gracias por elegir JuegosITAWA, donde la diversión y la seguridad van de la mano!</h3>
         </section>
 
         <section class="xbox-container">
             <div class="video-xbox">
-                <h5 class="text-center">Exclusivos de Xbox para el 2024</h5>
-                <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0ji5bnLel28?si=p0FnqTAcycvbc6Zm"
+                <h2 class="text-center">Exclusivos de Xbox para el 2024</h2>
+                <div class="ratio ratio-21x9">
+                    <iframe src="https://www.youtube.com/embed/0ji5bnLel28?si=p0FnqTAcycvbc6Zm"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
             </div>
             <div class="games-xbox">
-                <h1>Recomendados de Xbox</h1>
+                <h2>Recomendados de Xbox</h2>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card bg-light shadow-sm">
+                        <div class="card card-xbox shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Xbox/26.jpg" class="card-img-top" alt="Imagen Forza Motorsport ">
                             </div>
@@ -167,7 +168,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card bg-light shadow-sm">
+                        <div class="card card-xbox shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Xbox/64.jpg" class="card-img-top" alt="Imagen Elden Ring">
                             </div>
@@ -179,7 +180,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card bg-light shadow-sm">
+                        <div class="card card-xbox shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Xbox/27.jpg" class="card-img-top" alt="Imagen Cyberpunk 2077">
                             </div>
@@ -191,7 +192,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card bg-light shadow-sm">
+                        <div class="card card-xbox shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Xbox/39.jpg" class="card-img-top" alt="Imagen Starfield">
                             </div>
@@ -204,15 +205,15 @@
                     </div>
                 </div>
                 <div class="text-center mt-2">
-                    <a href="#" class="btn btn-success">Ver todo</a>
+                    <a href="/Views/catalogoXbox.html" class="btn btn-success">Ver todo</a>
                 </div>
             </div>
         </section>
 
         <section class="playstation-container">
             <div class="video-playstation">
-                <h5 class="text-center">Exclusivos de PlayStation para el 2024</h5>
-                <div class="ratio ratio-16x9">
+                <h2 class="text-center">Exclusivos de PlayStation para el 2024</h2>
+                <div class="ratio ratio-21x9">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/8eEQuyN67B8?si=vIaW5WgjNMVMOQ6A"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -220,10 +221,10 @@
                 </div>
             </div>
             <div class="games-playstation">
-                <h1>Recomendados de PlayStation</h1>
+                <h2>Recomendados de PlayStation</h2>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card card-play bg-light shadow-sm">
+                        <div class="card card-play shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Play/4.jpg" class="card-img-top" alt="Imagen God of War Ragnarök">
                             </div>
@@ -235,7 +236,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card card-play bg-light shadow-sm">
+                        <div class="card card-play shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Play/11.jpg" class="card-img-top" alt="Imagen The Last of Us Part I">
                             </div>
@@ -247,7 +248,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card card-play bg-light shadow-sm">
+                        <div class="card card-play shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Play/51.jpg" class="card-img-top" alt="Imagen Horizon Forbidden West">
                             </div>
@@ -259,7 +260,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-3">
-                        <div class="card card-play bg-light shadow-sm">
+                        <div class="card card-play shadow-sm">
                             <div class="text-center">
                                 <img src="./Styles/Images/Juegos/Play/47.jpg" class="card-img-top" alt="Imagen Marvel's Spider-Man">
                             </div>
@@ -271,9 +272,8 @@
                     </div>
                 </div>
                 <div class="text-center mt-2 mb-2">
-                    <a href="#" class="btn btn-primary">Ver todo</a>
+                    <a href="/Views/catalogoPlay.html" class="btn btn-primary">Ver todo</a>
                 </div>
-
             </div>
         </section>
 
@@ -297,7 +297,7 @@
                             alt="" loading="lazy" />
                     </div>
     
-                    <p class="text-center">JuegosITAWA <br> Donde la diversión y la seguridad van de la mano</p>
+                    <p class="text-center"><b>JuegosITAWA</b> <br> Donde la diversión y la seguridad van de la mano</p>
     
                     <ul class="list-unstyled d-flex flex-row justify-content-center">
                         <li>
@@ -324,22 +324,22 @@
     
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#!">Inicio</a>
+                            <a href="/index.html">Inicio</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#!">Catálogo Xbox</a>
+                            <a href="/Views/catalogoXbox.html">Catálogo Xbox</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#!">Catálogo PlayStation</a>
+                            <a href="/Views/catalogoPlay.html">Catálogo PlayStation</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#!">Cuentas Compartidas</a>
+                            <a href="/Views/cuentasCompartidas.html">Cuentas Compartidas</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#!">Cuentas Principales y Secundarias</a>
+                            <a href="/Views/cuentasPrincipalesSecundarias.html">Cuentas Principales y Secundarias</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#!">Acerca de nosotros</a>
+                            <a href="#intro">Acerca de nosotros</a>
                         </li>
                     </ul>
                 </div>
@@ -380,7 +380,7 @@
     
         <div class="text-center p-3 copy-container" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2024 Copyright:
-            <a class="text-white" href="#">JuegosITAWA</a>
+            <a class="text-white" href="/index.html">JuegosITAWA</a>
         </div>
     </footer>
 
