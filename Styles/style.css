@@ -339,6 +339,15 @@ body {
 
 /* footer */
 
+footer {
+    font-family: "Press Start 2P", system-ui;
+}
+
+.list-redes li {
+    display: flex;
+    justify-content: center;
+}
+
 .list-unstyled li a {
     text-decoration: none;
     color: #ccc;
@@ -349,11 +358,18 @@ body {
 }
 
 .fb, .in, .yt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
     padding: 8px;
     border-radius: 10px;
-    /* display: block;
-    width: 120px; */
-    text-align: center;
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.list-redes li i {
+    display: flex;
 }
 
 .fb {
@@ -361,13 +377,19 @@ body {
 }
 
 .in {
-    /* background: #d6249f; */
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
 .yt {
     background: rgb(255, 0, 0);
+}
+
+.list-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #cccc;
 }
 
 .copy-container a {
@@ -446,6 +468,11 @@ body {
     .card img {
         height: 300px;
     }
+
+    /* footer */
+    .div-containers {
+        padding: 10px 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -495,6 +522,11 @@ body {
     
     .card-text {
         font-size: 15px;
+    }
+
+    /* footer */
+    .div-containers {
+        padding: 10px 15px;
     }
 }
 
@@ -563,6 +595,20 @@ body {
     .card-text {
         font-size: 13.6px;
     }
+
+    /* footer */
+    .div-containers {
+        padding: 10px 7px;
+        font-size: 14px;
+    }
+
+    .contacto-container ul li p {
+        margin-bottom: 40px;
+    }
+
+    .contacto-container .correo {
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -603,7 +649,7 @@ body {
 
     .games-xbox h2, .games-playstation h2 {
         font-size: 28.5px;
-        padding-left: 15px;
+        padding-left: 25px;
     }
 
     /* Tarjetas */
@@ -612,7 +658,7 @@ body {
     }
 
     .row .card {
-        height: 780px;
+        height: 730px;
     }
 
     .card-title {
@@ -622,4 +668,25 @@ body {
     .card-text {
         font-size: 16px;
     }
+
+    /* footer */
+    .div-containers {
+        padding: 0 15px;
+        font-size: 16px;
+    }
+
+    .contacto-container ul li p {
+        margin-bottom: 35px;
+    }
+
+    .contacto-container .correo {
+        font-size: 15px;
+    }
 }
+
+/* @media (min-width: 1400px) {
+    
+    .row .card {
+        height: 700px;
+    }
+} */
