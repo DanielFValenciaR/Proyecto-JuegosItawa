@@ -5,7 +5,7 @@
 }
 
 body {
-    /* font-family: "Press Start 2P", system-ui; */
+    font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -14,7 +14,6 @@ body {
 
 .navbar {
     background-color: #ffff;
-    font-family: "Press Start 2P", system-ui;
 }
 
 .container-fluid {
@@ -31,7 +30,7 @@ body {
     text-align: center;
 }
 
-.navbar-nav .nav-item .nav-link{
+.navbar-nav .nav-item .nav-link {
     padding: 8px 15px;
     color: #555;
     transition: color 0.3s ease;
@@ -39,11 +38,29 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: rgba(19, 18, 18, 0.8); 
-    text-decoration: underline;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    border-radius: 2px;
 }
 
 .dropdown-menu {
-    background-color: #333333;
+    /* background-color: #333333; */
+    background-color: black;
+}
+
+.dropdown-divider {
+    background: wheat;
+}
+
+.dropdown-item {
+    color: #ffff;
+}
+
+.dropdown-xbox:hover {
+    background-color: #107B10;
+}
+
+.dropdown-play:hover {
+    background-color: #0070D1;
 }
 
 .buscador button {
@@ -115,7 +132,6 @@ body {
 }
 
 .carousel-caption {
-    font-family: "Press Start 2P", system-ui;
     bottom: 220px;
     z-index: 2;
 }
@@ -147,7 +163,6 @@ body {
 .introduction {
     margin: 0 auto;
     padding: 2rem;
-    font-family: "Press Start 2P", system-ui;
     background-color: #282828;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -163,7 +178,7 @@ body {
 }
 
 .introduction h1 {
-    color: #ffcc00; /* Color amarillo retro */
+    color: #ffcc00; 
     font-size: 1.5rem;
     margin-bottom: 1rem;
     animation: blink 5s infinite;
@@ -180,7 +195,7 @@ body {
 }
 
 .introduction h3 {
-    color: #ff5555; /* Verde para resaltar */
+    color: #ff5555; 
     font-size: 1rem;
     margin-top: 2rem;
     position: relative;
@@ -197,7 +212,6 @@ body {
 
 .xbox-container {
     background-color: #107B10;
-    font-family: "Press Start 2P", system-ui;
     width: 100%;
     padding: 30px 10px;
     animation: fadeIn 1.5s ease-out;
@@ -205,7 +219,6 @@ body {
 
 .playstation-container {
     background-color: #0070D1;
-    font-family: "Press Start 2P", system-ui;
     width: 100%;
     padding: 30px 10px;
     animation: fadeIn 1.5s ease-out;
@@ -337,11 +350,40 @@ body {
     filter: drop-shadow(0 1px 4px green);
 }
 
-/* footer */
-
-footer {
-    font-family: "Press Start 2P", system-ui;
+.tooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(4, 73, 4);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -50px; 
+    opacity: 0;
+    transition: opacity 0.3s;
 }
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(4, 73, 4) transparent transparent transparent;
+}
+
+.whatsapp:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* footer */
 
 .list-redes li {
     display: flex;
