@@ -16,45 +16,65 @@ body {
     background: -webkit-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
     background: -moz-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
     background: -o-radial-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1);
+}
 
+.main-container {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro-container {
+    padding: 5px;
 }
 
 .intro-container h1 {
-    margin: 15px auto 30px;
+    margin: 40px 20px;
 }
 
 .intro-container p {
-    margin-bottom: 15px;
+    margin: 25px 0;
+    padding: 0 30px;
     font-size: 20px;
 }
 
 .intro-container a {
     text-decoration: none;
-    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Define un gradiente como fondo */
-    -webkit-background-clip: text; /* Indica que el fondo se aplique solo al texto */
-    background-clip: text; /* Para navegadores que no soportan la versión con prefijo -webkit- */
-    color: transparent; /* Hace que el color del texto sea transparente */
-    animation: snakeColorMove 5s linear infinite; /* Define la animación para mover el color */
+    cursor: pointer;
+    transition: 0.5s;
+    color: #065806;
 }
 
-@keyframes snakeColorMove {
-    0% {
-        -webkit-text-fill-color: #045c04; /* Color inicial del texto */
-        background-position: 0%; /* Mueve el gradiente a la izquierda */
-    }
-    50% {
-        -webkit-text-fill-color: #00ff00; /* Color intermedio del texto */
-        background-position: 50%; /* Mueve el gradiente al centro */
-    }
-    100% {
-        -webkit-text-fill-color: #1af33e; /* Color final del texto */
-        background-position: 100%; /* Mueve el gradiente a la derecha */
-    }
+.intro-container a:hover {
+    color: #107B10;
+    text-shadow: 
+        0 0 10px #107B10,
+        0 0 20px #107B10,
+        0 0 40px #107B10,
+        0 0 80px #107B10,
+        0 0 120px #107B10;
 }
 
-/* .intro-container a:hover {
-    color: green;
+.intro-container p span {
+    font-size: 13px;
+}
+
+
+/* @keyframes animate {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+    }
 } */
+
 
 /* Tarjetas */
 
@@ -64,13 +84,12 @@ body {
     align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    /* background: linear-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1); */
 }
 
 .card {
     position: relative;
     width: 300px;
-    height: 350px;
+    height: 390px;
     background: transparent;
     border: none;
     margin: 20px;
@@ -87,7 +106,7 @@ body {
 }
 
 .card .front {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
     box-shadow: 0 5px 10px #000;
 }
 
@@ -109,29 +128,41 @@ body {
 } */
 
 .card .back {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(0deg);
     background: rgb(3, 35, 54);
     padding: 12px;
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* text-align: center; */
     box-shadow: 0 5px 10px #000;
 }
 
 .card .back h3 {
     margin: 2px auto 7px auto;
     text-align: center;
+    font-size: 19px;
 }
 
 .card .back iframe {
-    /* margin: 15px auto; */
     margin-bottom: 10px;
 }
 
+.card .back .details-container {
+    margin: 5px 0;
+}
+
+/* .card .back .details-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
 .card .back li {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    font-size: 13px;
 }
 
 .card:hover .front {
@@ -146,7 +177,6 @@ body {
 
 .paginacion {
     text-align: center;
-    /* padding: 5px 0; */
     margin: 50px 30px 60px;
     user-select: none;
 }
@@ -159,9 +189,8 @@ body {
 }
 
 .paginacion .page-item:not(.active):hover {
-    background-color: gray; 
+    background-color: #666666; 
 }
-
 
 .paginacion .page-item .page-link {
     color: #fff;
@@ -171,7 +200,7 @@ body {
 }
 
 .previous-page, .next-page {
-    background: #0AB1CF;
+    background: #107C10;
     border-radius: 45px;
     transition: 0.3s ease;
     width: 80px;
@@ -193,7 +222,7 @@ body {
 }
 
 .active {
-    background: #0AB1CF;
+    background: #107C10;
 }
 
 .disable {
