@@ -8,45 +8,46 @@ body {
     background: linear-gradient(45deg, #03045E, #023E8A, #0077B6);
     background: -webkit-linear-gradient(45deg, #03045E, #023E8A, #0077B6);
     background: -moz-linear-gradient(45deg, #03045E, #023E8A, #0077B6);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
 
+.intro-container {
+    padding: 10px;
 }
 
 .intro-container h1 {
-    margin: 15px auto 30px;
+    margin: 40px 20px;
 }
 
 .intro-container p {
-    margin-bottom: 15px;
+    margin: 25px 0;
+    padding: 0 60px;
     font-size: 20px;
 }
 
 .intro-container a {
     text-decoration: none;
-    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Define un gradiente como fondo */
-    -webkit-background-clip: text; /* Indica que el fondo se aplique solo al texto */
-    background-clip: text; /* Para navegadores que no soportan la versión con prefijo -webkit- */
-    color: transparent; /* Hace que el color del texto sea transparente */
-    animation: snakeColorMove 5s linear infinite; /* Define la animación para mover el color */
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f3f3f3;
 }
 
-@keyframes snakeColorMove {
-    0% {
-        -webkit-text-fill-color: #045c04; /* Color inicial del texto */
-        background-position: 0%; /* Mueve el gradiente a la izquierda */
-    }
-    50% {
-        -webkit-text-fill-color: #00ff00; /* Color intermedio del texto */
-        background-position: 50%; /* Mueve el gradiente al centro */
-    }
-    100% {
-        -webkit-text-fill-color: #1af33e; /* Color final del texto */
-        background-position: 100%; /* Mueve el gradiente a la derecha */
-    }
+.intro-container a:hover {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff,
+        0 0 80px #fff,
+        0 0 120px #fff;
 }
 
-/* .intro-container a:hover {
-    color: green;
-} */
+.intro-container p span {
+    font-size: 13px;
+}
+
 
 /* Tarjetas */
 
@@ -57,13 +58,12 @@ body {
     flex-wrap: wrap;
     gap: 5px;
     min-height: 100vh;
-    /* background: linear-gradient(45deg, #06120d, #133d2a, #206748, #2c9266, #46e7a1); */
 }
 
 .card {
     position: relative;
     width: 300px;
-    height: 350px;
+    height: 390px;
     background: transparent;
     border: none;
     margin: 20px;
@@ -80,7 +80,7 @@ body {
 }
 
 .card .front {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
     box-shadow: 0 5px 10px #000;
 }
 
@@ -91,40 +91,34 @@ body {
     object-fit: cover;
 }
 
-/* .card .front h3 {
-    position: absolute;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    background: rgba(0, 0, 0, .4);
-    text-align: center;
-} */
-
 .card .back {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(0deg);
     background: rgb(3, 35, 54);
     padding: 12px;
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* text-align: center; */
     box-shadow: 0 5px 10px #000;
 }
 
 .card .back h3 {
     margin: 2px auto 7px auto;
     text-align: center;
+    font-size: 19px;
 }
 
 .card .back iframe {
-    /* margin: 15px auto; */
     margin-bottom: 10px;
+}
+
+.card .back .details-container {
+    margin: 5px 0;
 }
 
 .card .back li {
     margin-bottom: 10px;
+    font-size: 13px;
 }
 
 .card:hover .front {
@@ -138,11 +132,6 @@ body {
 /* Paginacion */
 
 .paginacion {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap; */
     text-align: center;
     margin: 50px 30px 60px;
     user-select: none;
@@ -156,7 +145,7 @@ body {
 }
 
 .paginacion .page-item:not(.active):hover {
-    background-color: gray; 
+    background-color: #0070D1; 
 }
 
 .paginacion .page-item .page-link {
@@ -167,7 +156,7 @@ body {
 }
 
 .previous-page, .next-page {
-    background: #0AB1CF;
+    background: #0070D1;
     border-radius: 45px;
     transition: 0.3s ease;
     width: 80px;
@@ -189,7 +178,7 @@ body {
 }
 
 .active {
-    background: #0AB1CF;
+    background: #0070D1;
 }
 
 .disable {
