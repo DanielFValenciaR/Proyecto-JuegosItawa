@@ -94,7 +94,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     background-color: #f9f9f9;
-    color: red;
+    color: #555;
 }
 
 .buscador input:hover,
@@ -105,6 +105,7 @@ body {
 .buscador input:focus {
     border-color: #1b3553; 
     border-width: 2px; 
+    color: #555;
 }
 
 /* Main */
@@ -113,6 +114,10 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
     min-height: 100vh;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Carrusel */
@@ -383,6 +388,118 @@ body {
     opacity: 1;
 }
 
+/* Resultados Buscador */
+
+#results-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: 30px 0;
+    /* gap: 50px; */
+}
+
+.card-game {
+    position: relative;
+    width: 300px;
+    height: 390px;
+    background: transparent;
+    border: none;
+    margin: 20px;
+}
+
+.card-game .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card-game .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card-game .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+.card-game .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 12px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card-game .back h3 {
+    margin: 2px auto 7px auto;
+    text-align: center;
+    font-size: 19px;
+}
+
+.card-game .back iframe {
+    margin-bottom: 10px;
+}
+
+.card .back .details-container {
+    margin: 5px 0;
+}
+
+.card-game .back li {
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.card-game:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card-game:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* Estilos específicos para Xbox y PlayStation */
+.card-game .face.back.xbox {
+    background-color: #107B10;
+}
+
+.card-game .face.back.play {
+    background-color: #0070D1;
+}
+
+/* Resultado no encontrado */
+
+div.active2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* gap: 20px; */
+    padding: 20px;
+}
+
+div.active2 img {
+    width: 300px;
+}
+
+div.active2 strong {
+    font-size: 22px;
+    font-style: italic;
+}
+
 /* footer */
 
 .list-redes li {
@@ -509,6 +626,12 @@ body {
 
     .card img {
         height: 300px;
+    }
+
+    /* Buscador no encontrado */
+    div.active2 {
+        text-align: center;
+        justify-content: space-evenly;
     }
 
     /* footer */
@@ -638,6 +761,15 @@ body {
         font-size: 13.6px;
     }
 
+    /* Buscador no encontrado */
+    div.active2 {
+        padding: 30px;
+    }
+
+    div.active2 strong {
+        font-size: 30px;
+    }
+
     /* footer */
     .div-containers {
         padding: 10px 7px;
@@ -711,6 +843,15 @@ body {
         font-size: 16px;
     }
 
+    /* Buscador no encontrado */
+    div.active2 {
+        padding: 50px;
+    }
+
+    div.active2 strong {
+        font-size: 40px;
+    }
+
     /* footer */
     .div-containers {
         padding: 0 15px;
@@ -725,10 +866,3 @@ body {
         font-size: 15px;
     }
 }
-
-/* @media (min-width: 1400px) {
-    
-    .row .card {
-        height: 700px;
-    }
-} */
