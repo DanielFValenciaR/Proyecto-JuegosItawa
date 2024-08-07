@@ -80,7 +80,7 @@ body {
 }
 
 .card .front {
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(0deg);
     box-shadow: 0 5px 10px #000;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .card .back {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
     background: rgb(3, 35, 54);
     padding: 12px;
     color: #f3f3f3;
