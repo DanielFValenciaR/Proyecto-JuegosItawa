@@ -1,3 +1,5 @@
+import { fetchGet } from "./generico.js";
+
 function getPageList(totalPages, page, maxLength) {
     
     function range(start, end) {
@@ -37,216 +39,257 @@ function getPageList(totalPages, page, maxLength) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let numberOfItems = document.querySelectorAll(".cards-container .card").length;
-    let limitPerPage = getLimitPerPage(); // Cuantas tarjetas visibles por página
-    let totalPages = Math.ceil(numberOfItems / limitPerPage);
-    let paginationSize = getPaginationSize(); // Cuantos elementos visibles en la paginación
+    let cardsContainer = document.querySelector(".cards-container");
+    
+    fetchGet('/Json-db/catalogo.json', function (data) {
+        let urlParams = new URLSearchParams(window.location.search);
+        let consoleType = urlParams.get('console');
+        let games = data[consoleType];
 
-    // Obtener el número de página actual de la URL
-    let urlParams = new URLSearchParams(window.location.search);
-    let currentPage = parseInt(urlParams.get('page')) || 1;
+        if (games && Array.isArray(games)) {
+            games.forEach(games => {
+                const gameSection = document.createElement('section');
+                gameSection.classList.add('card');
+                gameSection.setAttribute('data-launch', games.lanzamiento);
+                gameSection.setAttribute('data-video', games.video);
 
-    function getLimitPerPage() {
-        // Calcular el límite de tarjetas por página según el tamaño de la pantalla
-        if (window.innerWidth < 1200) {
-            return 8; // Si la pantalla es mediana, mostrar 8 tarjetas por página
-        } else {
-            return 9; // Si la pantalla es grande, mostrar 9 tarjetas por página
-        }
-    };
+                let lanzamiento = new Date(games.lanzamiento);
+                let opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    
+                const fecha = lanzamiento.toLocaleDateString('es-ES', opcionesFecha);
+    
+                gameSection.innerHTML = `
+                    <div class="face front">
+                        <img src="${games.imagen}" alt="Imagen videojuego ${games.nombre}">
+                    </div>
+                    <div class="face back">
+                        <h3>${games.nombre}</h3>
+                        <iframe width="100%" height="100%" src="${games.video}" 
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="details-container">
+                            <ul>
+                                <li><b>Género: </b>${games.genero}</li>
+                                <li><b>Lanzamiento: </b>${fecha}</li>
+                            </ul>
+                        </div>
+                    </div>`;
+                
+                cardsContainer.appendChild(gameSection);
+            });
+            
+            let numberOfItems = document.querySelectorAll(".cards-container .card").length;
+            let limitPerPage = getLimitPerPage(); // Cuantas tarjetas visibles por página
+            let totalPages = Math.ceil(numberOfItems / limitPerPage);
+            let paginationSize = getPaginationSize(); // Cuantos elementos visibles en la paginación
+            
+            // Obtener el número de página actual de la URL
+            let currentPage = parseInt(urlParams.get('page')) || 1;
 
-    function getPaginationSize() {
-        if (window.innerWidth < 768) {
-            return 5; 
-        } else if (window.innerWidth <= 992) {
-            return 7;
-        } else {
-            return 9;
-        }
-    };
+            function getLimitPerPage() {
+                // Calcular el límite de tarjetas por página según el tamaño de la pantalla
+                if (window.innerWidth < 1200) {
+                    return 8; // Si la pantalla es mediana, mostrar 8 tarjetas por página
+                } else {
+                    return 9; // Si la pantalla es grande, mostrar 9 tarjetas por página
+                }
+            };
 
-    function showPage(wichPage) {
-        if (wichPage < 1 || wichPage > totalPages) return false;
-        currentPage = wichPage;
+            function getPaginationSize() {
+                if (window.innerWidth < 768) {
+                    return 5; 
+                } else if (window.innerWidth <= 992) {
+                    return 7;
+                } else {
+                    return 9;
+                }
+            };
 
-        // Actualizar la URL con el número de página actual
-        history.pushState(null, null, `?page=${currentPage}`);
+            function showPage(wichPage) {
+                if (wichPage < 1 || wichPage > totalPages) return false;
+                currentPage = wichPage;
 
-        // Desplazar la página hacia arriba con un desplazamiento más suave
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth", // Desplazamiento suave
-        });
+                // Actualizar la URL con el número de página actual
+                // history.pushState(null, null, `?page=${currentPage}`);
+                history.pushState(null, null, `?page=${currentPage}&console=${consoleType}`);
 
-        // Ocultar todos los iframes de YouTube
-        let youtubeIframes = document.querySelectorAll(".cards-container .card iframe");
-        youtubeIframes.forEach(function(iframe) {
-            iframe.setAttribute("loading", "lazy");
-            iframe.removeAttribute("src");
-        });
+                // Desplazar la página hacia arriba con un desplazamiento más suave
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Desplazamiento suave
+                });
 
-        // $(".cards-container .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
-        let startIndex = (currentPage - 1) * limitPerPage;
-        let endIndex = currentPage * limitPerPage;
+                // Ocultar todos los iframes de YouTube
+                let youtubeIframes = document.querySelectorAll(".cards-container .card iframe");
+                youtubeIframes.forEach(function(iframe) {
+                    iframe.setAttribute("loading", "lazy");
+                    iframe.removeAttribute("src");
+                });
 
-        let cards = Array.from(document.querySelectorAll(".cards-container .card"));
+                // $(".cards-container .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+                let startIndex = (currentPage - 1) * limitPerPage;
+                let endIndex = currentPage * limitPerPage;
 
-        // Ordenar las tarjetas según el valor del atributo data-launch
-        cards.sort(function(a, b) {
-            return new Date(b.dataset.launch) - new Date(a.dataset.launch);
-        });
+                let cards = Array.from(document.querySelectorAll(".cards-container .card"));
 
-        cards.forEach(function (card, index) {
-            if (index >= startIndex && index < endIndex) {
-                cardsContainer.appendChild(card);
-                card.style.display = "block";
+                // Ordenar las tarjetas según el valor del atributo data-launch
+                cards.sort(function(a, b) {
+                    return new Date(b.dataset.launch) - new Date(a.dataset.launch);
+                });
 
-                let iframe = card.querySelector("iframe");
-                let videoUrl = card.dataset.video; // Obtener la URL del video de YouTube almacenada en el atributo data-video de la tarjeta
-                if (iframe && videoUrl) {
-                    iframe.setAttribute("src", videoUrl);
+                cards.forEach(function (card, index) {
+                    if (index >= startIndex && index < endIndex) {
+                        cardsContainer.appendChild(card);
+                        card.style.display = "block";
+
+                        let iframe = card.querySelector("iframe");
+                        let videoUrl = card.dataset.video; // Obtener la URL del video de YouTube almacenada en el atributo data-video de la tarjeta
+                        if (iframe && videoUrl) {
+                            iframe.setAttribute("src", videoUrl);
+                        }
+
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+                updatePagination();
+
+                return true;
+            };
+
+            function updatePagination() {
+                // $("paginacion li").slice(1, -1).remove();
+                let paginationItems = document.querySelectorAll(".paginacion li");
+
+                // Eliminar elementos desde el segundo hasta el penúltimo
+                for (let i = 1; i < paginationItems.length - 1; i++) {
+                    paginationItems[i].parentNode.removeChild(paginationItems[i]);
                 }
 
-            } else {
-                card.style.display = "none";
-            }
-        });
+                // Actualizar la lista de páginas en la paginación
+                getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+                    // $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === currentPage).append($("<a>")
+                    // .addClass("page-link").attr({href: "javascript:void(0)"}).text(item || "...")).insertBefore(".next-page");
 
-        updatePagination();
+                    // Crear el elemento <li>
+                    let liElement = document.createElement("li");
 
-        return true;
-    };
+                    // Agregar clases al elemento <li>
+                    liElement.classList.add("page-item");
+                    if (item) {
+                        liElement.classList.add("current-page");
+                    } else {
+                        liElement.classList.add("dots");
+                    }
+                    if (item === currentPage) {
+                        liElement.classList.add("active");
+                    }
 
-    function updatePagination() {
-        // $("paginacion li").slice(1, -1).remove();
-        let paginationItems = document.querySelectorAll(".paginacion li");
+                    // Crear el elemento <a>
+                    let aElement = document.createElement("a");
 
-        // Eliminar elementos desde el segundo hasta el penúltimo
-        for (let i = 1; i < paginationItems.length - 1; i++) {
-            paginationItems[i].parentNode.removeChild(paginationItems[i]);
-        }
+                    // Agregar clase al elemento <a>
+                    aElement.classList.add("page-link");
 
-         // Actualizar la lista de páginas en la paginación
-        getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-            // $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === currentPage).append($("<a>")
-            // .addClass("page-link").attr({href: "javascript:void(0)"}).text(item || "...")).insertBefore(".next-page");
+                    // Agregar atributo href al elemento <a>
+                    aElement.setAttribute("href", "javascript:void(0)");
 
-            // Crear el elemento <li>
-            let liElement = document.createElement("li");
+                    // Agregar texto al elemento <a>
+                    aElement.textContent = item || "...";
 
-            // Agregar clases al elemento <li>
-            liElement.classList.add("page-item");
-            if (item) {
-                liElement.classList.add("current-page");
-            } else {
-                liElement.classList.add("dots");
-            }
-            if (item === currentPage) {
-                liElement.classList.add("active");
-            }
+                    // Agregar el elemento <a> como hijo del elemento <li>
+                    liElement.appendChild(aElement);
 
-            // Crear el elemento <a>
-            let aElement = document.createElement("a");
+                    // Insertar el elemento <li> antes del elemento con la clase "next-page"
+                    let nextPageElement = document.querySelector(".next-page");
+                    nextPageElement.parentNode.insertBefore(liElement, nextPageElement);
+                });
 
-            // Agregar clase al elemento <a>
-            aElement.classList.add("page-link");
+                // Desactivar/activar los botones de página anterior y siguiente según la página actual
 
-            // Agregar atributo href al elemento <a>
-            aElement.setAttribute("href", "javascript:void(0)");
+                // $(".previous-page").toggleClass("disable", currentPage === 1);
+                let previousPageElement = document.querySelector(".previous-page");
+                previousPageElement.classList.toggle("disable", currentPage === 1);
 
-            // Agregar texto al elemento <a>
-            aElement.textContent = item || "...";
+                // $(".next-page").toggleClass("disable", currentPage === totalPages);
+                let nextPageElement = document.querySelector(".next-page");
+                nextPageElement.classList.toggle("disable", currentPage === totalPages);
+            };
 
-            // Agregar el elemento <a> como hijo del elemento <li>
-            liElement.appendChild(aElement);
+            // $(".paginacion").append(
+            //     $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("<")),
+            //     $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text(">"))
+            // );
 
-            // Insertar el elemento <li> antes del elemento con la clase "next-page"
-            let nextPageElement = document.querySelector(".next-page");
-            nextPageElement.parentNode.insertBefore(liElement, nextPageElement);
-        });
+            // Crear elementos y configurar atributos y clases para los botones de página anterior y siguiente
+            let previousPageListItem = document.createElement("li");
+            previousPageListItem.classList.add("page-item");
+            previousPageListItem.classList.add("previous-page");
 
-        // Desactivar/activar los botones de página anterior y siguiente según la página actual
+            let previousPageLink = document.createElement("a");
+            previousPageLink.classList.add("page-link");
+            previousPageLink.setAttribute("href", "javascript:void(0)");
+            previousPageLink.textContent = "<";
 
-        // $(".previous-page").toggleClass("disable", currentPage === 1);
-        let previousPageElement = document.querySelector(".previous-page");
-        previousPageElement.classList.toggle("disable", currentPage === 1);
+            let nextPageListItem = document.createElement("li");
+            nextPageListItem.classList.add("page-item");
+            nextPageListItem.classList.add("next-page");
 
-        // $(".next-page").toggleClass("disable", currentPage === totalPages);
-        let nextPageElement = document.querySelector(".next-page");
-        nextPageElement.classList.toggle("disable", currentPage === totalPages);
-    };
+            let nextPageLink = document.createElement("a");
+            nextPageLink.classList.add("page-link");
+            nextPageLink.setAttribute("href", "javascript:void(0)");
+            nextPageLink.textContent = ">";
 
-    // $(".paginacion").append(
-    //     $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("<")),
-    //     $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text(">"))
-    // );
+            // Adjuntar elementos para los botones de página anterior y siguiente
+            previousPageListItem.appendChild(previousPageLink);
+            nextPageListItem.appendChild(nextPageLink);
 
-    // Crear elementos y configurar atributos y clases para los botones de página anterior y siguiente
-    let previousPageListItem = document.createElement("li");
-    previousPageListItem.classList.add("page-item");
-    previousPageListItem.classList.add("previous-page");
+            let paginationList = document.querySelector(".paginacion");
+            paginationList.appendChild(previousPageListItem);
+            paginationList.appendChild(nextPageListItem);
 
-    let previousPageLink = document.createElement("a");
-    previousPageLink.classList.add("page-link");
-    previousPageLink.setAttribute("href", "javascript:void(0)");
-    previousPageLink.textContent = "<";
+            // $(".cards-container").show();
+            
+            cardsContainer.style.display = "flex";
 
-    let nextPageListItem = document.createElement("li");
-    nextPageListItem.classList.add("page-item");
-    nextPageListItem.classList.add("next-page");
+            showPage(currentPage);
 
-    let nextPageLink = document.createElement("a");
-    nextPageLink.classList.add("page-link");
-    nextPageLink.setAttribute("href", "javascript:void(0)");
-    nextPageLink.textContent = ">";
+            /*$(document).on("click", ".paginacion li.current-page:not(.active)", function() {
+                return showPage(+$(this).text());
+            })*/
 
-    // Adjuntar elementos para los botones de página anterior y siguiente
-    previousPageListItem.appendChild(previousPageLink);
-    nextPageListItem.appendChild(nextPageLink);
+            // Manejar eventos de clic en los enlaces de paginación para cambiar de página
+            document.addEventListener("click", function(event) {
+                // Verificar si el clic ocurrió en un elemento <a> dentro de un <li> con la clase "current-page"
+                if (event.target.matches(".paginacion li.current-page:not(.active) a")) {
+                    console.log("Elemento clicado:", event.target.parentElement); // El elemento <li> padre del <a> clicado
 
-    let paginationList = document.querySelector(".paginacion");
-    paginationList.appendChild(previousPageListItem);
-    paginationList.appendChild(nextPageListItem);
+                    // Obtener el número de página del texto del elemento <a> clicado
+                    let pageNumber = +event.target.textContent;
+                    console.log("Número de página:", pageNumber); // Mostrar el número de página
 
-    // $(".cards-container").show();
-    let cardsContainer = document.querySelector(".cards-container");
-    cardsContainer.style.display = "flex";
-
-    showPage(currentPage);
-
-    /*$(document).on("click", ".paginacion li.current-page:not(.active)", function() {
-        return showPage(+$(this).text());
-    })*/
-
-    // Manejar eventos de clic en los enlaces de paginación para cambiar de página
-    document.addEventListener("click", function(event) {
-        // Verificar si el clic ocurrió en un elemento <a> dentro de un <li> con la clase "current-page"
-        if (event.target.matches(".paginacion li.current-page:not(.active) a")) {
-            console.log("Elemento clicado:", event.target.parentElement); // El elemento <li> padre del <a> clicado
-
-            // Obtener el número de página del texto del elemento <a> clicado
-            let pageNumber = +event.target.textContent;
-            console.log("Número de página:", pageNumber); // Mostrar el número de página
-
-            // Llamar a la función showPage con el número de página
-            return showPage(pageNumber);
-        }
-    });   
+                    // Llamar a la función showPage con el número de página
+                    return showPage(pageNumber);
+                }
+            });   
     
-    // $(".next-page").on("click", function() {
-    //     return showPage(currentPage + 1);
-    // });
+            // $(".next-page").on("click", function() {
+            //     return showPage(currentPage + 1);
+            // });
 
-     // Manejar evento de clic en el botón de página siguiente
-    let nextPageElement = document.querySelector(".next-page");
-    nextPageElement.addEventListener("click", function() {
-        return showPage(currentPage + 1);
+            // Manejar evento de clic en el botón de página siguiente
+            let nextPageElement = document.querySelector(".next-page");
+            nextPageElement.addEventListener("click", function() {
+                return showPage(currentPage + 1);
+            });
+
+            // Manejar evento de clic en el botón de página anterior
+            let previousPageElement = document.querySelector(".previous-page");
+            previousPageElement.addEventListener("click", function() {
+                return showPage(currentPage - 1);
+            });
+        };
     });
-
-    // Manejar evento de clic en el botón de página anterior
-    let previousPageElement = document.querySelector(".previous-page");
-    previousPageElement.addEventListener("click", function() {
-        return showPage(currentPage - 1);
-    });
-
 });
