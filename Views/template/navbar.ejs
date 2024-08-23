@@ -1,0 +1,53 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/Styles/Images/Logo/logo.svg" alt="Logo" width="90" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-3 mb-lg-0 align-items-sm-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Xbox
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item dropdown-xbox" href="/cuentas-compartidas">Cuentas Compartidas</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="#">Códigos Digitales</a></li> -->
+                            <li><a class="dropdown-item dropdown-xbox" href="/catalogo=xbox">Catálogo Xbox</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">PlayStation</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-play" href="/cuentas-principales-secundarias">Cuentas Principales y Secundarias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item dropdown-play" href="/catalogo=playstation">Catálogo PlayStation 4-5</a></li>
+                            </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#intro">Acerca de nosotros</a>
+                    </li>
+                </ul>
+                <form class="d-flex buscador" id="searchForm" action="/buscar" method="GET">
+                    <input id="searchInput" class="form-control me-2" type="text" placeholder="Juego-Género" aria-label="Search" name="q">
+                    <button id="btnBuscar" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
