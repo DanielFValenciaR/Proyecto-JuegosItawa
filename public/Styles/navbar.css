@@ -1,0 +1,162 @@
+.navbar {
+    background-color: #ffff;
+}
+
+.container-fluid {
+    padding: 0 20px;
+}
+
+.navbar-brand img {
+    background: transparent;
+    margin-left: 15px;
+    margin-right: 5px;
+    transform: scale(1.9);
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 8px 15px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(19, 18, 18, 0.8); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    border-radius: 2px;
+}
+
+.dropdown-menu {
+    /* background-color: #333333; */
+    background-color: black;
+}
+
+.dropdown-divider {
+    background: wheat;
+}
+
+.dropdown-item {
+    color: #ffff;
+}
+
+.dropdown-xbox:hover {
+    background-color: #107B10;
+    color: #ffff;
+}
+
+.dropdown-play:hover {
+    background-color: #0070D1;
+    color: #ffff;
+}
+
+.buscador button {
+    background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+    background-size: 800%;
+    padding: 6px 12px;
+    border: none;
+    color: azure;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+.buscador button:hover {
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.buscador input {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.buscador input:hover,
+.buscador input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el cursor o enfocar */
+}
+
+.buscador input:focus {
+    border-color: #1b3553; 
+    border-width: 2px; 
+    color: #555;
+}
+
+
+@media (min-width: 576px) {
+    /* nav */
+    .navbar-nav {
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item .nav-link, .buscador {
+        font-size: 13px;
+    }
+
+    .buscador {
+        margin-bottom: 10px;
+    }
+
+    .buscador input::placeholder {
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* nav */
+    .navbar-nav .nav-item .nav-link, .buscador {
+        font-size: 14px;
+    }
+
+    .navbar-collapse .buscador input::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* nav */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 11.5px;
+        margin: 0 18px;
+        padding: 8px 5px;
+    }
+
+    .buscador {
+        font-size: 12.5px;
+    }
+
+    .navbar-collapse .buscador input::placeholder {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* nav */
+    .navbar-nav {
+        padding: 0 40px;
+    }
+
+    .navbar-nav .nav-item .nav-link, .buscador {
+        font-size: 14px;
+    }
+
+    .navbar-collapse .buscador input::placeholder {
+        font-size: 14px;
+    }
+}

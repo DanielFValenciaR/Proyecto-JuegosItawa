@@ -1,0 +1,137 @@
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    /* min-height: 100vh; */
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 390px;
+    background: transparent;
+    border: none;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 12px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back h3 {
+    margin: 2px auto 7px auto;
+    text-align: center;
+    font-size: 19px;
+}
+
+.card .back iframe {
+    margin-bottom: 10px;
+}
+
+.card .back .details-container {
+    margin: 5px 0;
+}
+
+.card .back li {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* Estilos específicos para Xbox y PlayStation */
+
+.card-game .face.back.xbox {
+    background-color: #107B10;
+}
+
+.card-game .face.back.play {
+    background-color: #0070D1;
+}
+
+/* Resultado no encontrado */
+
+div.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+div.not-found img {
+    width: 300px;
+}
+
+div.not-found strong {
+    font-size: 22px;
+    font-style: italic;
+}
+
+@media (min-width: 576px) {
+    /* Buscador no encontrado */
+    div.not-found {
+        text-align: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    div.not-found {
+        padding: 30px;
+    }
+
+    div.not-found strong {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    div.not-found {
+        padding: 50px;
+    }
+
+    div.not-found strong {
+        font-size: 40px;
+    }
+}

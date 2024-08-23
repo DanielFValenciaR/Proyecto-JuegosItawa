@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Barra de navegacion */
+
+
+/* Main */
+
+.main-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Carrusel */
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    min-height: 400px;
+}
+
+.carousel-item img {
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Introduccion */
+
+.introduction {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #282828;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.introduction h1 {
+    color: #ffcc00; 
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.introduction p {
+    font-size: 16px;
+    margin: 30px 20px;
+}
+
+.introduction h3 {
+    color: #ff5555; 
+    font-size: 1rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.introduction h3::before {
+    content: '>';
+    position: absolute;
+    left: -10px;
+    animation: blink 1s infinite;
+}
+
+/* Xbox - PlayStation */
+
+.xbox-container {
+    background-color: #107B10;
+    width: 100%;
+    padding: 30px 10px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.playstation-container {
+    background-color: #0070D1;
+    width: 100%;
+    padding: 30px 10px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.video-xbox, .video-playstation {
+    padding: 20px 50px;
+    margin-bottom: 35px;
+}
+
+.video-xbox h2, .video-playstation h2 {
+    margin-bottom: 25px;
+    /* font-size: 25px; */
+}
+
+.video-xbox iframe, .video-playstation iframe {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.games-xbox, .games-playstation {
+    padding: 0px 25px 15px 25px;
+}
+
+.games-xbox h2, .games-playstation h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+/* Tarjetas */
+
+.row .card {
+    height: 650px;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.row .card-xbox {
+    background-color: rgb(3, 31, 3);
+}
+
+.row .card-play {
+    background-color: rgb(9, 9, 51);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    border-bottom: 2px solid #f1eded;
+    object-fit: cover;
+}
+
+.card-body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+.card-text {
+    font-size: 13px;
+    color: #dddddd; 
+    text-align: center;
+}
+
+.games-xbox a, .games-playstation a {
+    margin-top: 10px;
+    padding: 10px 100px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.games-xbox a:hover, .games-playstation a:hover {
+    animation-name: swing;
+        -webkit-animation-name: swing;
+        -moz-animation-name: swing;
+    animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+}
+
+    @keyframes swing {
+        20% {transform: rotate3d(0, 0, 1, 15deg);}
+        40% {transform: rotate3d(0, 0, 1, -10deg);}
+        60% {transform: rotate3d(0, 0, 1, 5deg);}
+        80% {transform: rotate3d(0, 0, 1, -5deg);}
+        to  {transform: rotate3d(0, 0, 1, 0deg);}
+    }
+
+/* Whatsapp para contacto */
+
+
+/* footer */
+
+
+/* Breakpoints para responsive */
+
+@media (min-width: 576px) {
+    /* carrusel */
+    .carousel-item {
+        min-height: 400px;
+    }
+
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 55px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Xbox - PlayStation */
+    .video-xbox, .video-playstation {
+        padding: 20px 30px;
+    }
+
+    .games-xbox h2, .games-playstation h2 {
+        text-align: center;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    .games-playstation h2 {
+        line-height: 40px;
+    }
+
+    /* Tarjetas */
+    .row {
+        padding: 0 20px;
+    }
+
+    .row .card {
+        height: 500px;
+    }
+
+    .card img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* carrusel */
+    .carousel-item img {
+        height: 440px;
+    }
+
+    .carousel-caption {
+        bottom: 85px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+    /* Xbox - PlayStation */
+    .video-xbox, .video-playstation {
+        padding: 20px 40px;
+    }
+
+    .games-xbox h2, .games-playstation h2 {
+        font-size: 26px;
+    }
+
+    /* Tarjetas */
+    .row .card {
+        padding: 10px;
+    }
+
+    .card img {
+        height: 300px;
+    }
+
+    .card-title {
+        font-size: 19px;
+    }
+    
+    .card-text {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* carrusel */
+    .carousel-item img {
+        height: 480px;
+    }
+
+    .carousel-caption {
+        bottom: 100px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 35px;
+    }
+
+    .carousel-caption p {
+        font-size: 20px;
+    }
+
+    .card-play {
+        height: 450px;
+    }
+
+    /* Xbox - PlayStation */
+    .video-xbox, .video-playstation {
+        padding: 20px 50px;
+    }
+
+    .games-xbox h2, .games-playstation h2 {
+        font-size: 27px;
+        text-align: start;
+        padding-left: 8px;
+    }
+
+    /* Tarjetas */
+    .row {
+        padding: 0;
+    }
+
+    .row .card {
+        height: 720px;
+        padding: 5px;
+    }
+
+    .card-title {
+        font-size: 19px;
+    }
+    
+    .card-text {
+        font-size: 13.6px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* carrusel */
+    .carousel-item img {
+        height: 520px;
+    }
+
+    .carousel-caption {
+        bottom: 130px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 40px;
+    }
+
+    .carousel-caption p {
+        font-size: 23px;
+    }
+
+    /* Xbox - PlayStation */
+    .video-xbox, .video-playstation {
+        padding: 20px 60px;
+    }
+
+    .games-xbox h2, .games-playstation h2 {
+        font-size: 28.5px;
+        padding-left: 25px;
+    }
+
+    /* Tarjetas */
+    .row {
+        padding: 10px 20px;
+    }
+
+    .row .card {
+        height: 730px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-text {
+        font-size: 16px;
+    }
+}

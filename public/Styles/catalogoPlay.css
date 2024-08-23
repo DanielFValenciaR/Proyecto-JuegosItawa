@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #03045E, #023E8A, #0077B6);
+    background: -webkit-linear-gradient(45deg, #03045E, #023E8A, #0077B6);
+    background: -moz-linear-gradient(45deg, #03045E, #023E8A, #0077B6);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro-container {
+    padding: 10px;
+}
+
+.intro-container h1 {
+    margin: 40px 20px;
+}
+
+.intro-container p {
+    margin: 25px 0;
+    padding: 0 60px;
+    font-size: 20px;
+}
+
+.intro-container a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f3f3f3;
+}
+
+.intro-container a:hover {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff,
+        0 0 80px #fff,
+        0 0 120px #fff;
+}
+
+.intro-container p span {
+    font-size: 13px;
+}
+
+
+/* Tarjetas */
+
+
+/* Paginacion */
+
+.paginacion {
+    text-align: center;
+    margin: 50px 30px 60px;
+    user-select: none;
+}
+
+.paginacion .page-item {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 50%);
+    border: transparent;
+}
+
+.paginacion .page-item:not(.active):hover {
+    background-color: #0070D1; 
+}
+
+.paginacion .page-item .page-link {
+    color: #fff;
+    font-size: 1em;
+    line-height: 45px;
+    text-decoration: none;
+}
+
+.previous-page, .next-page {
+    background: #0070D1;
+    border-radius: 45px;
+    transition: 0.3s ease;
+    width: 80px;
+    cursor: pointer;
+}
+
+.previous-page:hover {
+    transform: translateX(-5px);
+}
+
+.next-page:hover {
+    transform: translateX(5px);
+}
+
+.current-page, .dots {
+    background: #CCC;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.active {
+    background: #0070D1;
+}
+
+.disable {
+    background: #CCC;
+}

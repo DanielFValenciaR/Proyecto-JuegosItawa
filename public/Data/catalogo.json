@@ -1,0 +1,1070 @@
+{
+    "xbox": [
+        {
+            "id": 1,
+            "nombre": "Destroy All Humans 2: Reprobed",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2022/08/30",
+            "imagen": "/Styles/Images/Juegos/Xbox/1.jpg",
+            "video": "https://www.youtube.com/embed/o9inMcQFCxw?si=3zzgY0LzPNkSKc2D"
+        },
+        {
+            "id": 2,
+            "nombre": "Gotham Knights",
+            "genero": "RPG mundo abierto",
+            "lanzamiento": "2022/10/21",
+            "imagen": "/Styles/Images/Juegos/Xbox/2.jpg",
+            "video": "https://www.youtube.com/embed/LrFed2ZNHpI?si=bvnm0VRC-VcxoTUw"
+        },
+        {
+            "id": 3,
+            "nombre": "Resident Evil Village: Gold Edition",
+            "genero": "Survival horror",
+            "lanzamiento": "2022/10/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/3.jpg",
+            "video": "https://www.youtube.com/embed/tJuEJKlIDP4?si=hqnz0Kfs0c2N9CSs"
+        },
+        {
+            "id": 4,
+            "nombre": "Sonic Frontiers: Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2022/11/08",
+            "imagen": "/Styles/Images/Juegos/Xbox/4.jpg",
+            "video": "https://www.youtube.com/embed/2bzFcPXOkfw?si=-N9A2FrD-HU0P_Ab"
+        },
+        {
+            "id": 5,
+            "nombre": "The Dark Pictures: The Devil in Me",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/11/18",
+            "imagen": "/Styles/Images/Juegos/Xbox/5.jpg",
+            "video": "https://www.youtube.com/embed/xbYVygV54QI?si=VXZua2sJjpnRjBIU"
+        },
+        {
+            "id": 6,
+            "nombre": "Evil West",
+            "genero": "Disparos tercera persona",
+            "lanzamiento": "2022/11/22",
+            "imagen": "/Styles/Images/Juegos/Xbox/6.jpg",
+            "video": "https://www.youtube.com/embed/2_RvSe1RsKw?si=JE8oaYcMeJd_q51f"
+        },
+        {
+            "id": 7,
+            "nombre": "NFS Unbound: Palace Edition",
+            "genero": "Acción-Carreras",
+            "lanzamiento": "2022/12/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/7.jpg",
+            "video": "https://www.youtube.com/embed/aVuijSRVum0?si=n0MlOGF-nE5dwO1U"
+        },
+        {
+            "id": 8,
+            "nombre": "The Callisto Protocol: Deluxe Edition",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/12/01",
+            "imagen": "/Styles/Images/Juegos/Xbox/8.jpg",
+            "video": "https://www.youtube.com/embed/kCOMfPG04b4?si=Z7YkJ9DTzV_NhkyY"
+        },
+        {
+            "id": 9,
+            "nombre": "Crisis Core: Final Fantasy VII-Reunion",
+            "genero": "Rol de Acción-Aventura",
+            "lanzamiento": "2022/12/13",
+            "imagen": "/Styles/Images/Juegos/Xbox/9.jpg",
+            "video": "https://www.youtube.com/embed/h3UhaX5neig?si=LglzKEV7nKJGGQHS"
+        },
+        {
+            "id": 10,
+            "nombre": "Dead Space: Remake",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/01/27",
+            "imagen": "/Styles/Images/Juegos/Xbox/10.jpg",
+            "video": "https://www.youtube.com/embed/2gfD5tgzC6w?si=LwpBHwIwsy6ZHw6D"
+        },
+        {
+            "id": 11,
+            "nombre": "Hogwarts Legacy: Deluxe Edition",
+            "genero": "RPG de Acción-Aventura",
+            "lanzamiento": "2023/02/10",
+            "imagen": "/Styles/Images/Juegos/Xbox/11.jpg",
+            "video": "https://www.youtube.com/embed/jOKkgf32iL8?si=WXNYn1uMSZ4HzQQf"
+        },
+        {
+            "id": 12,
+            "nombre": "A Plague Tale: Innocence",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2019/05/14",
+            "imagen": "/Styles/Images/Juegos/Xbox/12.jpg",
+            "video": "https://www.youtube.com/embed/YFFpl24to9I?si=zdKGyXsv6tJxC2p3"
+        },
+        {
+            "id": 13,
+            "nombre": "WWE 2K23: Deluxe Edition",
+            "genero": "Peleas-Deportes",
+            "lanzamiento": "2023/03/14",
+            "imagen": "/Styles/Images/Juegos/Xbox/13.jpg",
+            "video": "https://www.youtube.com/embed/TYE--1WNm8I?si=yEv8nv8xO0_0pFX-"
+        },
+        {
+            "id": 14,
+            "nombre": "Sifu",
+            "genero": "Peleas-Acción",
+            "lanzamiento": "2021/05/03",
+            "imagen": "/Styles/Images/Juegos/Xbox/14.jpg",
+            "video": "https://www.youtube.com/embed/T04PFgXQ3Xg?si=Ww4SL68U3T_Hwn8f"
+        },
+        {
+            "id": 15,
+            "nombre": "Dead Island 2: Gold Edition",
+            "genero": "Rol de Acción-Terror",
+            "lanzamiento": "2023/04/21",
+            "imagen": "/Styles/Images/Juegos/Xbox/15.jpg",
+            "video": "https://www.youtube.com/embed/MK5N6XRDTcE?si=lVlYlRB4kI9b-Rty"
+        },
+        {
+            "id": 16,
+            "nombre": "STAR WARS Jedi: Survivor Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/04/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/16.jpg",
+            "video": "https://www.youtube.com/embed/S2pijCChFdo?si=RbZ7nC6rmNbdqs6e"
+        },
+        {
+            "id": 17,
+            "nombre": "Street Fighter 6: Deluxe Edition",
+            "genero": "Peleas-Acción",
+            "lanzamiento": "2023/06/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/17.jpg",
+            "video": "https://www.youtube.com/embed/zf2QApuDxTc?si=TIIY3fRUrSNXPaCB"
+        },
+        {
+            "id": 18,
+            "nombre": "Diablo IV: Deluxe Edition",
+            "genero": "RPG de Acción-Aventura",
+            "lanzamiento": "2023/06/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/18.jpg",
+            "video": "https://www.youtube.com/embed/QIC4ZV8Ul1o?si=44ftdpZwBNkDozrF"
+        },
+        {
+            "id": 19,
+            "nombre": "F1 23: Champions Edition",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2023/04/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/19.jpg",
+            "video": "https://www.youtube.com/embed/9x2KDqUceZY?si=uOl-n_xk3Gvo1oPU"
+        },
+        {
+            "id": 20,
+            "nombre": "Crash Team Rumble: Deluxe Edition",
+            "genero": "MOBA",
+            "lanzamiento": "2023/06/20",
+            "imagen": "/Styles/Images/Juegos/Xbox/20.jpg",
+            "video": "https://www.youtube.com/embed/h3GHUP7Bb1c?si=qU6xnSm_4ZjoQfim"
+        },
+        {
+            "id": 21,
+            "nombre": "EA Sports FC 24",
+            "genero": "Deportes",
+            "lanzamiento": "2023/09/29",
+            "imagen": "/Styles/Images/Juegos/Xbox/21.jpg",
+            "video": "https://www.youtube.com/embed/hupwWrjTX1k?si=-i7nYrNWJxqeK9Xa"
+        },
+        {
+            "id": 22,
+            "nombre": "RIDE 5",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2023/08/21",
+            "imagen": "/Styles/Images/Juegos/Xbox/22.jpg",
+            "video": "https://www.youtube.com/embed/VwZwF34Nu0Q?si=d-ixDUFvo24JoMVU"
+        },
+        {
+            "id": 23,
+            "nombre": "The Crew Motorfest: Cross-Gen Bundle",
+            "genero": "Carreras-Aventura",
+            "lanzamiento": "2023/09/11",
+            "imagen": "/Styles/Images/Juegos/Xbox/23.jpg",
+            "video": "https://www.youtube.com/embed/m91eOFuA4sE?si=xCwnJrLKpO5KPvxi"
+        },
+        {
+            "id": 24,
+            "nombre": "NBA 2K24: Black Mamba Edition",
+            "genero": "Deportes",
+            "lanzamiento": "2023/09/08",
+            "imagen": "/Styles/Images/Juegos/Xbox/24.jpg",
+            "video": "https://www.youtube.com/embed/0Ykn9_QZbKs?si=ZfPRBPeigSnhDvp7"
+        },
+        {
+            "id": 25,
+            "nombre": "Mortal Kombat 1: Premium Edition",
+            "genero": "Peleas-Acción",
+            "lanzamiento": "2023/09/14",
+            "imagen": "/Styles/Images/Juegos/Xbox/25.jpg",
+            "video": "https://www.youtube.com/embed/2BpuAG80pbc?si=zcUS38Dt4FQpaQVV"
+        },
+        {
+            "id": 26,
+            "nombre": "Forza Motorsport",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2023/10/10",
+            "imagen": "/Styles/Images/Juegos/Xbox/26.jpg",
+            "video": "https://www.youtube.com/embed/FPgkY69Bol4?si=l5EHsArBqzdyem1c"
+        },
+        {
+            "id": 27,
+            "nombre": "Cyberpunk 2077: Ultimate Edition",
+            "genero": "RPG de Acción-Aventura",
+            "lanzamiento": "2023/12/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/27.jpg",
+            "video": "https://www.youtube.com/embed/OCotm2JoNqQ?si=Ob0zzzzh5TZWM37p"
+        },
+        {
+            "id": 28,
+            "nombre": "Assassin's Creed Mirage: Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/10/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/28.jpg",
+            "video": "https://www.youtube.com/embed/TfwuSObbuEI?si=UPv8EH0wHOEijr7z"
+        },
+        {
+            "id": 29,
+            "nombre": "Alan Wake 2: Deluxe Edition",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/10/27",
+            "imagen": "/Styles/Images/Juegos/Xbox/29.jpg",
+            "video": "https://www.youtube.com/embed/D192yUZsWok?si=P7dSMYPx31UBY-mU"
+        },
+        {
+            "id": 30,
+            "nombre": "Remnant II",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/07/25",
+            "imagen": "/Styles/Images/Juegos/Xbox/30.jpg",
+            "video": "https://www.youtube.com/embed/nOu2ohP7ckk?si=9ApPpVUI9jWeGhcS"
+        },
+        {
+            "id": 31,
+            "nombre": "Sniper Ghost Warrior Contracts: Double Pack",
+            "genero": "Shooter",
+            "lanzamiento": "2022/10/25",
+            "imagen": "/Styles/Images/Juegos/Xbox/31.jpg",
+            "video": "https://www.youtube.com/embed/R6ylOO9PiIA?si=Yvt7rpNFdOukMYGs"
+        },
+        {
+            "id": 32,
+            "nombre": "Stray",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/10/08",
+            "imagen": "/Styles/Images/Juegos/Xbox/32.jpg",
+            "video": "https://www.youtube.com/embed/AJV0J8zRBnA?si=OpnQWRkLmZlvhGai"
+        },
+        {
+            "id": 33,
+            "nombre": "Call of Duty: MWIII - Cross-Gen Edition",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2023/11/10",
+            "imagen": "/Styles/Images/Juegos/Xbox/33.jpg",
+            "video": "https://www.youtube.com/embed/nWne1NkAD5I?si=G108dvuJ4L14_0Nn"
+        },
+        {
+            "id": 34,
+            "nombre": "Grand Theft Auto IV",
+            "genero": "Acción-Aventura-Disparos",
+            "lanzamiento": "2017/02/09",
+            "imagen": "/Styles/Images/Juegos/Xbox/34.jpg",
+            "video": "https://www.youtube.com/embed/3A3Shobsy6g?si=uPmYfKsFRwpZHRs-"
+        },
+        {
+            "id": 35,
+            "nombre": "Five Nights at Freddy's: Core Collection",
+            "genero": "Survival Horror",
+            "lanzamiento": "2021/01/12",
+            "imagen": "/Styles/Images/Juegos/Xbox/35.jpg",
+            "video": "https://www.youtube.com/embed/lMEUoHhzodQ?si=j9iLaiThv4lmrjVF"
+        },
+        {
+            "id": 36,
+            "nombre": "Five Nights at Freddy's: Help Wanted",
+            "genero": "Survival Horror",
+            "lanzamiento": "2020/10/29",
+            "imagen": "/Styles/Images/Juegos/Xbox/36.jpg",
+            "video": "https://www.youtube.com/embed/hYQpCG_SEmg?si=UXrcNr0N7iRtATV5"
+        },
+        {
+            "id": 37,
+            "nombre": "Five Nights at Freddy's: Security Breach",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/11/22",
+            "imagen": "/Styles/Images/Juegos/Xbox/37.jpg",
+            "video": "https://www.youtube.com/embed/jOY8risqls4?si=M-JGkNU_qH36FH8a"
+        },
+        {
+            "id": 38,
+            "nombre": "Armored Core VI: Fires of Rubicon",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/08/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/38.jpg",
+            "video": "https://www.youtube.com/embed/7T6FUX5ZuXI?si=oPGwYDO2i99beU3X"
+        },
+        {
+            "id": 39,
+            "nombre": "Starfield: Premium Edition Upgrade",
+            "genero": "RPG de aventura",
+            "lanzamiento": "2023/08/31",
+            "imagen": "/Styles/Images/Juegos/Xbox/39.jpg",
+            "video": "https://www.youtube.com/embed/yOC3eNMNmrc?si=vrbHZNkRpqfhlSUg"
+        },
+        {
+            "id": 40,
+            "nombre": "Avatar: Frontiers of Pandora",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/12/07",
+            "imagen": "/Styles/Images/Juegos/Xbox/40.jpg",
+            "video": "https://www.youtube.com/embed/5XMojNXFmkc?si=mh51JyAMuxipPNJA"
+        },
+        {
+            "id": 41,
+            "nombre": "Prince of Persia: The Lost Crown",
+            "genero": "Plataformas-Acción-Aventura",
+            "lanzamiento": "2024/01/18",
+            "imagen": "/Styles/Images/Juegos/Xbox/41.jpg",
+            "video": "https://www.youtube.com/embed/48NIw6s86eo?si=RDU0Y472HEOgu28f"
+        },
+        {
+            "id": 42,
+            "nombre": "Resident Evil 4: Deluxe Edition",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/03/23",
+            "imagen": "/Styles/Images/Juegos/Xbox/42.jpg",
+            "video": "https://www.youtube.com/embed/zBhi-SQBs7Q?si=5e7uGMkxjMYxeBhK"
+        },
+        {
+            "id": 43,
+            "nombre": "Lords of the Fallen: Deluxe Edition",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2023/10/13",
+            "imagen": "/Styles/Images/Juegos/Xbox/43.jpg",
+            "video": "https://www.youtube.com/embed/EllTFegQdrs?si=Havm8U27FjELbjTF"
+        },
+        {
+            "id": 44,
+            "nombre": "Metal Gear Solid: Master Collection Vol.1",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/10/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/44.jpg",
+            "video": "https://www.youtube.com/embed/CgkFTOrLrCo?si=zFwx0HC2XxHv46_U"
+        },
+        {
+            "id": 45,
+            "nombre": "Tekken 8",
+            "genero": "Lucha",
+            "lanzamiento": "2024/01/25",
+            "imagen": "/Styles/Images/Juegos/Xbox/45.jpg",
+            "video": "https://www.youtube.com/embed/mfdSc819CEY?si=G12gs0rQKMOPMU_v"
+        },
+        {
+            "id": 46,
+            "nombre": "Alone in the Dark",
+            "genero": "Survival Horror",
+            "lanzamiento": "2024/03/20",
+            "imagen": "/Styles/Images/Juegos/Xbox/46.jpg",
+            "video": "https://www.youtube.com/embed/cVpjS7AbAuA?si=XNEbV9Maq12Fo25l"
+        },
+        {
+            "id": 47,
+            "nombre": "EA Sports UFC 5",
+            "genero": "Lucha-Deportes",
+            "lanzamiento": "2023/10/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/47.jpg",
+            "video": "https://www.youtube.com/embed/cSkQ1MnECW0?si=k_pBP8RilCbYr6qX"
+        },
+        {
+            "id": 48,
+            "nombre": "Alan Wake Remastered",
+            "genero": "Survival Horror",
+            "lanzamiento": "2021/10/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/48.jpg",
+            "video": "https://www.youtube.com/embed/HKy4p57n9JU?si=Kt-s04YibZxgZFy_"
+        },
+        {
+            "id": 49,
+            "nombre": "Subnautica",
+            "genero": "Aventura-Supervivencia",
+            "lanzamiento": "2018/12/03",
+            "imagen": "/Styles/Images/Juegos/Xbox/49.jpg",
+            "video": "https://www.youtube.com/embed/NU8XGaR3TY0?si=Np_QChVtLxxAyigVD"
+        },
+        {
+            "id": 50,
+            "nombre": "Subnautica: Below Zero",
+            "genero": "Aventura-Supervivencia",
+            "lanzamiento": "2021/05/13",
+            "imagen": "/Styles/Images/Juegos/Xbox/50.jpg",
+            "video": "https://www.youtube.com/embed/MSFr_8XqZtY?si=Sg8UNogYMv3yRLHc"
+        },
+        {
+            "id": 51,
+            "nombre": "Just Dance 2024 Edition",
+            "genero": "Baile-Musical",
+            "lanzamiento": "2023/10/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/51.jpg",
+            "video": "https://www.youtube.com/embed/aSCQY9wbios?si=q6ppbx6s1NYs2QRV"
+        },
+        {
+            "id": 52,
+            "nombre": "RoboCop: Rogue City",
+            "genero": "Shooter-Acción",
+            "lanzamiento": "2023/11/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/52.jpg",
+            "video": "https://www.youtube.com/embed/VrfSmGmEwxA?si=SF743D07ujHkxtKR"
+        },
+        {
+            "id": 53,
+            "nombre": "Naruto x Boruto: Ultimate Ninja Storm Connections",
+            "genero": "Lucha-Aventura",
+            "lanzamiento": "2023/11/17",
+            "imagen": "/Styles/Images/Juegos/Xbox/53.jpg",
+            "video": "https://www.youtube.com/embed/oCqPUz5vZ2M?si=1U7rW-VYp3iy66sH"
+        },
+        {
+            "id": 54,
+            "nombre": "Jujutsu Kaisen Cursed Clash",
+            "genero": "Lucha",
+            "lanzamiento": "2024/02/01",
+            "imagen": "/Styles/Images/Juegos/Xbox/54.jpg",
+            "video": "https://www.youtube.com/embed/9EU7mhUGPw8?si=qrhuJSjYrszjvuea"
+        },
+        {
+            "id": 55,
+            "nombre": "Tomb Raider I-III Remastered",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2024/02/13",
+            "imagen": "/Styles/Images/Juegos/Xbox/55.jpg",
+            "video": "https://www.youtube.com/embed/UFEovzu7-Gg?si=uC6l481fiGp7XkAG"
+        },
+        {
+            "id": 56,
+            "nombre": "ARK: Survival Ascended",
+            "genero": "Rol-Supervivencia",
+            "lanzamiento": "2023/11/21",
+            "imagen": "/Styles/Images/Juegos/Xbox/57.jpg",
+            "video": "https://www.youtube.com/embed/4yy2ARysvAQ?si=mvnz3vwBACVg9QVn"
+        },
+        {
+            "id": 57,
+            "nombre": "Baldur's Gate 3",
+            "genero": "Rol-Estrategia",
+            "lanzamiento": "2023/12/07",
+            "imagen": "/Styles/Images/Juegos/Xbox/58.jpg",
+            "video": "https://www.youtube.com/embed/4YjOGGtt51s?si=9Ne-9ECUH0-K73PE"
+        },
+        {
+            "id": 58,
+            "nombre": "Minecraft",
+            "genero": "Sandbox",
+            "lanzamiento": "2020/12/26",
+            "imagen": "/Styles/Images/Juegos/Xbox/59.jpg",
+            "video": "https://www.youtube.com/embed/RTtrofabIYY?si=w_cbDFZO728eGOR3"
+        },
+        {
+            "id": 59,
+            "nombre": "Suicide Squad: Kill the Justice League",
+            "genero": "Shooter-Acción-Aventura",
+            "lanzamiento": "2024/02/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/60.jpg",
+            "video": "https://www.youtube.com/embed/hq0HdBifpi8?si=2Sc-LFsPwDbeBS6P"
+        },
+        {
+            "id": 60,
+            "nombre": "The Outlast Trials",
+            "genero": "Survival Horror",
+            "lanzamiento": "2024/03/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/61.jpg",
+            "video": "https://www.youtube.com/embed/6UvTtcUsqXI?si=wyYTkNHEiM0ZK-R4"
+        },
+        {
+            "id": 61,
+            "nombre": "WWE 2K24",
+            "genero": "Lucha-Deportes",
+            "lanzamiento": "2024/03/08",
+            "imagen": "/Styles/Images/Juegos/Xbox/62.jpg",
+            "video": "https://www.youtube.com/embed/6gfYy_hlw04?si=9TlzHYp85ZFXw53x"
+        },
+        {
+            "id": 62,
+            "nombre": "Naruto Shippuden: Ultimate Ninja Storm Legacy",
+            "genero": "Lucha-Aventura",
+            "lanzamiento": "2017/08/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/63.jpg",
+            "video": "https://www.youtube.com/embed/tG-CfIxE5Pw?si=p1RcjZTps6wL5Vvg"
+        },
+        {
+            "id": 63,
+            "nombre": "Elden Ring: Shadow of the Erdtree",
+            "genero": "Rol de Acción-Aventura",
+            "lanzamiento": "2024/06/21",
+            "imagen": "/Styles/Images/Juegos/Xbox/64.jpg",
+            "video": "https://www.youtube.com/embed/a8k8R0Q2ubY?si=GXwrWyJh15q6YI-Y"
+        },
+        {
+            "id": 64,
+            "nombre": "Dragon's Dogma 2",
+            "genero": "Rol de Acción-Aventura",
+            "lanzamiento": "2024/03/22",
+            "imagen": "/Styles/Images/Juegos/Xbox/65.jpg",
+            "video": "https://www.youtube.com/embed/ffkoAB2CtdY?si=Un1PwWwhC5H_-Lq8"
+        },
+        {
+            "id": 65,
+            "nombre": "TopSpin 2K25",
+            "genero": "Deportes",
+            "lanzamiento": "2024/04/26",
+            "imagen": "/Styles/Images/Juegos/Xbox/66.jpg",
+            "video": "https://www.youtube.com/embed/IDGa6H3-aCY?si=s3IBGQ9kQiQGVBtH"
+        }
+    ],
+    "playstation":[
+        {
+            "id": 1,
+            "nombre": "EA SPORTS FIFA 23",
+            "genero": "Deportes",
+            "lanzamiento": "2022/09/30",
+            "imagen": "/Styles/Images/Juegos/Play/2.jpg",
+            "video": "https://www.youtube.com/embed/fQGiDbgDYoU?si=tWHw-Haya-5yJPow"
+        },
+        {
+            "id": 2,
+            "nombre": "God of War",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2018/04/20",
+            "imagen": "/Styles/Images/Juegos/Play/3.jpg",
+            "video": "https://www.youtube.com/embed/yqfe_0zL-A0?si=4-8chy2WtNsT0FSC"
+        },
+        {
+            "id": 3,
+            "nombre": "God of War: Ragnarök",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2022/11/09",
+            "imagen": "/Styles/Images/Juegos/Play/4.jpg",
+            "video": "https://www.youtube.com/embed/V-QYwKgVIMY?si=IMBDgIf1mWqQuqbC"
+        },
+        {
+            "id": 4,
+            "nombre": "The Last of Us Remastered",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2014/07/29",
+            "imagen": "/Styles/Images/Juegos/Play/5.jpg",
+            "video": "https://www.youtube.com/embed/UxnOwU7CKrw?si=bEGp1Yx3j4xiShoQ"
+        },
+        {
+            "id": 5,
+            "nombre": "The Last of Us Part II",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2020/06/19",
+            "imagen": "/Styles/Images/Juegos/Play/6.jpg",
+            "video": "https://www.youtube.com/embed/4A5rQbjfJ_E?si=ZQnd_Vh2IEnyawef"
+        },
+        {
+            "id": 6,
+            "nombre": "Grand Theft Auto V",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2014/11/18",
+            "imagen": "/Styles/Images/Juegos/Play/7.jpg",
+            "video": "https://www.youtube.com/embed/Er4PoLU3f4Y?si=5uER9nNvHd2V_m7T"
+        },
+        {
+            "id": 7,
+            "nombre": "Hogwarts Legacy: Deluxe Edition",
+            "genero": "RPG de Aventura",
+            "lanzamiento": "2023/02/10",
+            "imagen": "/Styles/Images/Juegos/Play/8.jpg",
+            "video": "https://www.youtube.com/embed/5oiFK_R_srU?si=MN82CddSBRA1X8vs"
+        },
+        {
+            "id": 8,
+            "nombre": "Call of Duty: Modern Warfare 2",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2022/10/28",
+            "imagen": "/Styles/Images/Juegos/Play/9.jpg",
+            "video": "https://www.youtube.com/embed/uIfT8ZD90wQ?si=w3_wQm6wGVJVCGVb"
+        },
+        {
+            "id": 9,
+            "nombre": "Red Dead Redemption 2",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2018/10/26",
+            "imagen": "/Styles/Images/Juegos/Play/10.jpg",
+            "video": "https://www.youtube.com/embed/JR6Od0vwwCY?si=P6EbCpDaaK2ZE5Y9"
+        },
+        {
+            "id": 10,
+            "nombre": "The Last of Us Part I PS5",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2022/09/02",
+            "imagen": "/Styles/Images/Juegos/Play/11.jpg",
+            "video": "https://www.youtube.com/embed/cgIVoWU9Ndw?si=-S3T_6TdGJv3JICt"
+        },
+        {
+            "id": 11,
+            "nombre": "Dead Space Remake",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/01/27",
+            "imagen": "/Styles/Images/Juegos/Play/12.jpg",
+            "video": "https://www.youtube.com/embed/2gfD5tgzC6w?si=yCvb-fbxrkShJw0G"
+        },
+        {
+            "id": 12,
+            "nombre": "Crash Bandicoot 4: It's About Time",
+            "genero": "Plataformas",
+            "lanzamiento": "2020/10/02",
+            "imagen": "/Styles/Images/Juegos/Play/13.jpg",
+            "video": "https://www.youtube.com/embed/Vi39oyZAwkc?si=vM9Ya8SFQ8am6O0j"
+        },
+        {
+            "id": 13,
+            "nombre": "WWE 2K23",
+            "genero": "Peleas-Deportes",
+            "lanzamiento": "2023/03/14",
+            "imagen": "/Styles/Images/Juegos/Play/14.jpg",
+            "video": "https://www.youtube.com/embed/TYE--1WNm8I?si=yEv8nv8xO0_0pFX-"
+        },
+        {
+            "id": 14,
+            "nombre": "The Callisto Protocol",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/12/01",
+            "imagen": "/Styles/Images/Juegos/Play/15.jpg",
+            "video": "https://www.youtube.com/embed/kCOMfPG04b4?si=UC8DILABb-MHKmdl"
+        },
+        {
+            "id": 15,
+            "nombre": "Diablo IV",
+            "genero": "RPG de Acción-Aventura",
+            "lanzamiento": "2023/06/05",
+            "imagen": "/Styles/Images/Juegos/Play/16.jpg",
+            "video": "https://www.youtube.com/embed/agLYBrnLU28?si=vGau5BQfI0DVwbVa"
+        },
+        {
+            "id": 16,
+            "nombre": "Street Fighter 6",
+            "genero": "Peleas-Acción",
+            "lanzamiento": "2023/06/02",
+            "imagen": "/Styles/Images/Juegos/Play/17.jpg",
+            "video": "https://www.youtube.com/embed/zf2QApuDxTc?si=eL1fKeYXFhuHybfu"
+        },
+        {
+            "id": 17,
+            "nombre": "STAR WARS Jedi: Survivor",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/04/28",
+            "imagen": "/Styles/Images/Juegos/Play/18.jpg",
+            "video": "https://www.youtube.com/embed/S2pijCChFdo?si=mxBrqKvHkmAxFlPv"
+        },
+        {
+            "id": 18,
+            "nombre": "SpiderMan: Miles Morales",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2020/11/12",
+            "imagen": "/Styles/Images/Juegos/Play/19.jpg",
+            "video": "https://www.youtube.com/embed/Q5La6Np-Lz4?si=u76WNjjq-uqBirId"
+        },
+        {
+            "id": 19,
+            "nombre": "F1 23",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2023/04/28",
+            "imagen": "/Styles/Images/Juegos/Play/20.jpg",
+            "video": "https://www.youtube.com/embed/9x2KDqUceZY?si=OFHftOaN4EUX4KvO"
+        },
+        {
+            "id": 20,
+            "nombre": "Dead Island 2",
+            "genero": "Rol de Acción-Terror",
+            "lanzamiento": "2023/06/20",
+            "imagen": "/Styles/Images/Juegos/Play/21.jpg",
+            "video": "https://www.youtube.com/embed/j79GuJdm6rc?si=poDIyTeKrZKuNuVI"
+        },
+        {
+            "id": 21,
+            "nombre": "Sifu: Vengeance Edition",
+            "genero": "Lucha-Acción",
+            "lanzamiento": "2022/02/08",
+            "imagen": "/Styles/Images/Juegos/Play/22.jpg",
+            "video": "https://www.youtube.com/embed/BsuNUH8pql4?si=VbnVx5JxXSU-mzTE"
+        },
+        {
+            "id": 22,
+            "nombre": "Resident Evil 4",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/03/23",
+            "imagen": "/Styles/Images/Juegos/Play/23.jpg",
+            "video": "https://www.youtube.com/embed/pEtlLWDD5K0?si=cFGRkZWrFwnZhpnD"
+        },
+        {
+            "id": 23,
+            "nombre": "Elden Ring",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2022/02/25",
+            "imagen": "/Styles/Images/Juegos/Play/24.jpg",
+            "video": "https://www.youtube.com/embed/xrmy10S_6Gw?si=NqsmwhT_j8_9TWUm"
+        },
+        {
+            "id": 24,
+            "nombre": "Resident Evil 3",
+            "genero": "Survival Horror",
+            "lanzamiento": "2023/09/08",
+            "imagen": "/Styles/Images/Juegos/Play/25.jpg",
+            "video": "https://www.youtube.com/embed/7EzsjlCAlZY?si=Plq-gcX4I9U4tSBY"
+        },
+        {
+            "id": 25,
+            "nombre": "Shadow of the Tomb Raider: Definitive Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2019/11/05",
+            "imagen": "/Styles/Images/Juegos/Play/26.jpg",
+            "video": "https://www.youtube.com/embed/z1Ve9wkGRUc?si=R_fcgMbv3M9gMUQQ"
+        },
+        {
+            "id": 26,
+            "nombre": "Mafia Trilogy",
+            "genero": "Acción-Aventura-Disparos",
+            "lanzamiento": "2020/09/24",
+            "imagen": "/Styles/Images/Juegos/Play/27.jpg",
+            "video": "https://www.youtube.com/embed/BtO5UTZ0EH8?si=AR9jEoN-QUhZtJhd"
+        },
+        {
+            "id": 27,
+            "nombre": "Far Cry 6: Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2021/10/07",
+            "imagen": "/Styles/Images/Juegos/Play/28.jpg",
+            "video": "https://www.youtube.com/embed/kOmoFMotVQA?si=d1HShccY6cxYv7Mi"
+        },
+        {
+            "id": 28,
+            "nombre": "Dying Light 2: Stay Human",
+            "genero": "RPG de Acción-Terror",
+            "lanzamiento": "2022/02/04",
+            "imagen": "/Styles/Images/Juegos/Play/29.jpg",
+            "video": "https://www.youtube.com/embed/HaJnNg587aM?si=gfof7KvEeNlWb68h"
+        },
+        {
+            "id": 29,
+            "nombre": "Gran Turismo 7",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2022/03/04",
+            "imagen": "/Styles/Images/Juegos/Play/30.jpg",
+            "video": "https://www.youtube.com/embed/lQoEB4iNXkY?si=CyC8WXGzNf8efnhN"
+        },
+        {
+            "id": 30,
+            "nombre": "Assassin's Creed Valhalla",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2020/11/10",
+            "imagen": "/Styles/Images/Juegos/Play/31.jpg",
+            "video": "https://www.youtube.com/embed/lHtytAZHT2k?si=1fH66T871_TDjZSu"
+        },
+        {
+            "id": 31,
+            "nombre": "Mortal Kombat 11 Ultimate",
+            "genero": "Lucha",
+            "lanzamiento": "2020/11/17",
+            "imagen": "/Styles/Images/Juegos/Play/32.jpg",
+            "video": "https://www.youtube.com/embed/W5nLxF-l_Bc?si=0TooTb_Mbr88UAQu"
+        },
+        {
+            "id": 32,
+            "nombre": "Crash Bandicoot N.Sane Trilogy",
+            "genero": "Plataformas",
+            "lanzamiento": "2017/06/30",
+            "imagen": "/Styles/Images/Juegos/Play/33.jpg",
+            "video": "https://www.youtube.com/embed/xmiuXi_ig30?si=eJUfOb8pDySznKM2"
+        },
+        {
+            "id": 33,
+            "nombre": "Stray",
+            "genero": "Aventura",
+            "lanzamiento": "2022/07/19",
+            "imagen": "/Styles/Images/Juegos/Play/34.jpg",
+            "video": "https://www.youtube.com/embed/h9iNM4hvGpQ?si=m9vNkYLQgKTa9OLP"
+        },
+        {
+            "id": 34,
+            "nombre": "Demon Slayer: The Hinokami Chronicles",
+            "genero": "Lucha-Acción",
+            "lanzamiento": "2021/10/15",
+            "imagen": "/Styles/Images/Juegos/Play/35.jpg",
+            "video": "https://www.youtube.com/embed/kDzpSGfOXUY?si=C04tByvQjrV0bMWr"
+        },
+        {
+            "id": 35,
+            "nombre": "Resident Evil Triple Pack",
+            "genero": "Survival Horror",
+            "lanzamiento": "2016/09/22",
+            "imagen": "/Styles/Images/Juegos/Play/36.jpg",
+            "video": "https://www.youtube.com/embed/V4Si9z9m8xw?si=SKaRSorHcZUE5lxs"
+        },
+        {
+            "id": 36,
+            "nombre": "Little Nightmares II: Deluxe Edition",
+            "genero": "Aventura-Plataformas",
+            "lanzamiento": "2020/10/29",
+            "imagen": "/Styles/Images/Juegos/Play/37.jpg",
+            "video": "https://www.youtube.com/embed/3DwbmOAZmsc?si=ZJy6VJpv5Yaku8Do"
+        },
+        {
+            "id": 37,
+            "nombre": "Crash Team Racing Nitro-Fueled",
+            "genero": "Carreras",
+            "lanzamiento": "2019/06/20",
+            "imagen": "/Styles/Images/Juegos/Play/38.jpg",
+            "video": "https://www.youtube.com/embed/QIvjwuOFwdE?si=4afeYUH7qG7JBNq-"
+        },
+        {
+            "id": 38,
+            "nombre": "COD Black Ops III: Zombies Chronicles Edition",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2017/05/15",
+            "imagen": "/Styles/Images/Juegos/Play/39.jpg",
+            "video": "https://www.youtube.com/embed/jGWMDn_kjXs?si=xnhBN1ps81moh_-h"
+        },
+        {
+            "id": 39,
+            "nombre": "Sekiro: Shadows Die Twice - GOTY",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2019/03/22",
+            "imagen": "/Styles/Images/Juegos/Play/40.jpg",
+            "video": "https://www.youtube.com/embed/Ga7SuC3mNog?si=jtjTknDNHm8BxpZ_"
+        },
+        {
+            "id": 40,
+            "nombre": "Resident Evil Village: Gold Edition",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/10/28",
+            "imagen": "/Styles/Images/Juegos/Play/41.jpg",
+            "video": "https://www.youtube.com/embed/tJuEJKlIDP4?si=wwU3FcIUPK7CoLne"
+        },
+        {
+            "id": 41,
+            "nombre": "Grand Theft Auto: The Trilogy - The Definitive Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2021/11/11",
+            "imagen": "/Styles/Images/Juegos/Play/42.jpg",
+            "video": "https://www.youtube.com/embed/FL5yD9s0bQw?si=VqXoE0hYmqAe0rsC"
+        },
+        {
+            "id": 42,
+            "nombre": "Need for Speed Unbound",
+            "genero": "Carreras",
+            "lanzamiento": "2022/12/02",
+            "imagen": "/Styles/Images/Juegos/Play/43.jpg",
+            "video": "https://www.youtube.com/embed/aVuijSRVum0?si=QvGafXE0QTz4LJwA"
+        },
+        {
+            "id": 43,
+            "nombre": "RACCOON CITY EDITION",
+            "genero": "Survival Horror",
+            "lanzamiento": "2022/06/13",
+            "imagen": "/Styles/Images/Juegos/Play/44.jpg",
+            "video": "https://www.youtube.com/embed/TEMrbkL206U?si=Mx2of_Ynpv4bovUK"
+        },
+        {
+            "id": 44,
+            "nombre": "Minecraft",
+            "genero": "Sandbox-Survival",
+            "lanzamiento": "2019/12/10",
+            "imagen": "/Styles/Images/Juegos/Play/45.jpg",
+            "video": "https://www.youtube.com/embed/ztNoBI0m_P0?si=o-69BhHURq0ZTDFt"
+        },
+        {
+            "id": 45,
+            "nombre": "Subnautica",
+            "genero": "Aventura-Survival",
+            "lanzamiento": "2021/05/14",
+            "imagen": "/Styles/Images/Juegos/Play/46.jpg",
+            "video": "https://www.youtube.com/embed/NU8XGaR3TY0?si=BWRAKwxrxKKY5aew"
+        },
+        {
+            "id": 46,
+            "nombre": "Marvel's SpiderMan Remastered",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/05/04",
+            "imagen": "/Styles/Images/Juegos/Play/47.jpg",
+            "video": "https://www.youtube.com/embed/RTCdE5SY_cM?si=RMDnfF0eV7CZpFaM"
+        },
+        {
+            "id": 47,
+            "nombre": "Final Fantasy XVI",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2023/06/22",
+            "imagen": "/Styles/Images/Juegos/Play/48.jpg",
+            "video": "https://www.youtube.com/embed/l3WAgN7tPHU?si=fRvG6Wrk1NAHz2po"
+        },
+        {
+            "id": 48,
+            "nombre": "EA SPORTS FC 24",
+            "genero": "Deportes",
+            "lanzamiento": "2023/09/29",
+            "imagen": "/Styles/Images/Juegos/Play/49.jpg",
+            "video": "https://www.youtube.com/embed/U5wTE1t9MqU?si=rrftUQwWV1EEFc0i"
+        },
+        {
+            "id": 49,
+            "nombre": "Horizon Zero Dawn Complete Edition",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2017/12/05",
+            "imagen": "/Styles/Images/Juegos/Play/50.jpg",
+            "video": "https://www.youtube.com/embed/cvXYf9JTjUY?si=6eCDel2ukDkLdO0V"
+        },
+        {
+            "id": 50,
+            "nombre": "Horizon Forbidden West",
+            "genero": "RPG de Acción",
+            "lanzamiento": "2022/02/18",
+            "imagen": "/Styles/Images/Juegos/Play/51.jpg",
+            "video": "https://www.youtube.com/embed/qcv6Ek-pcY4?si=ETWSuA8OJGyIJ5bM"
+        },
+        {
+            "id": 51,
+            "nombre": "Red Dead Redemption",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/08/17",
+            "imagen": "/Styles/Images/Juegos/Play/52.jpg",
+            "video": "https://www.youtube.com/embed/1nKedomd7nM?si=MdW8MJiZJUZnOXRm"
+        },
+        {
+            "id": 52,
+            "nombre": "Mortal Kombat 1",
+            "genero": "Lucha",
+            "lanzamiento": "2023/09/19",
+            "imagen": "/Styles/Images/Juegos/Play/53.jpg",
+            "video": "https://www.youtube.com/embed/naoAT--dP0I?si=6A7jBgRMBO6uND2h"
+        },
+        {
+            "id": 53,
+            "nombre": "Crash Team Rumble",
+            "genero": "MOBA",
+            "lanzamiento": "2023/06/20",
+            "imagen": "/Styles/Images/Juegos/Play/54.jpg",
+            "video": "https://www.youtube.com/embed/h3GHUP7Bb1c?si=DDxGMkuPDqRhT9ev"
+        },
+        {
+            "id": 54,
+            "nombre": "Armored Core VI: Fires of Rubicon",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/08/24",
+            "imagen": "/Styles/Images/Juegos/Play/55.jpg",
+            "video": "https://www.youtube.com/embed/9PFZduFNKug?si=fRQ8y0MbM0-9p_iS"
+        },
+        {
+            "id": 55,
+            "nombre": "NBA 2K24",
+            "genero": "Deportes",
+            "lanzamiento": "2023/09/08",
+            "imagen": "/Styles/Images/Juegos/Play/56.jpg",
+            "video": "https://www.youtube.com/embed/0Ykn9_QZbKs?si=_Ha2FTFSZkK_qfcp"
+        },
+        {
+            "id": 56,
+            "nombre": "The Crew Motorfest",
+            "genero": "Carreras",
+            "lanzamiento": "2023/09/13",
+            "imagen": "/Styles/Images/Juegos/Play/57.jpg",
+            "video": "https://www.youtube.com/embed/8G2mfNvyPMg?si=bVgP5wWuG5IrkFKd"
+        },
+        {
+            "id": 57,
+            "nombre": "Assassin's Creed Mirage",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/10/05",
+            "imagen": "/Styles/Images/Juegos/Play/58.jpg",
+            "video": "https://www.youtube.com/embed/Vy_vGGuLoCI?si=KSe6bxz3L-yDDaHh"
+        },
+        {
+            "id": 58,
+            "nombre": "Call of Duty: Modern Warfare III",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2023/11/10",
+            "imagen": "/Styles/Images/Juegos/Play/59.jpg",
+            "video": "https://www.youtube.com/embed/nWne1NkAD5I?si=eKCRAJzDAGJq3yMh"
+        },
+        {
+            "id": 59,
+            "nombre": "Baldur's Gate 3",
+            "genero": "Rol-Estrategia",
+            "lanzamiento": "2023/12/07",
+            "imagen": "/Styles/Images/Juegos/Play/60.jpg",
+            "video": "https://www.youtube.com/embed/4YjOGGtt51s?si=Zt7IVcyRM5djYHXr"
+        },
+        {
+            "id": 60,
+            "nombre": "Marvel's SpiderMan 2",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/10/20",
+            "imagen": "/Styles/Images/Juegos/Play/61.jpg",
+            "video": "https://www.youtube.com/embed/_ZF2rd1T5Bk?si=BoYpKVrcC2dTdIyR"
+        },
+        {
+            "id": 61,
+            "nombre": "EA Sports UFC 5",
+            "genero": "Lucha-Deportes",
+            "lanzamiento": "2023/10/27",
+            "imagen": "/Styles/Images/Juegos/Play/62.jpg",
+            "video": "https://www.youtube.com/embed/y6uKkLVJoH8?si=nji8a5rKjC9UWY-8"
+        },
+        {
+            "id": 62,
+            "nombre": "Payday 3",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2023/09/21",
+            "imagen": "/Styles/Images/Juegos/Play/63.jpg",
+            "video": "https://www.youtube.com/embed/FpYs8FBzxVM?si=1Xr9aW29D7A96eWI"
+        },
+        {
+            "id": 63,
+            "nombre": "Lies of P",
+            "genero": "Rol de Acción",
+            "lanzamiento": "2023/09/19",
+            "imagen": "/Styles/Images/Juegos/Play/64.jpg",
+            "video": "https://www.youtube.com/embed/mBKgCk4sJx0?si=OEf3Hzqkar5B_Tm_"
+        },
+        {
+            "id": 64,
+            "nombre": "Lords of the Fallen",
+            "genero": "Rol de Acción",
+            "lanzamiento": "2023/10/13",
+            "imagen": "/Styles/Images/Juegos/Play/65.jpg",
+            "video": "https://www.youtube.com/embed/EllTFegQdrs?si=oMOQjAgy90pASSU9"
+        },
+        {
+            "id": 65,
+            "nombre": "Avatar: Frontiers of Pandora",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2023/12/07",
+            "imagen": "/Styles/Images/Juegos/Play/66.jpg",
+            "video": "https://www.youtube.com/embed/LhulPgyOBoo?si=n-P5XJcEV6nizGwR"
+        },
+        {
+            "id": 66,
+            "nombre": "The Last of Us Part II Remastered",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2024/01/19",
+            "imagen": "/Styles/Images/Juegos/Play/67.jpg",
+            "video": "https://www.youtube.com/embed/BxdMrfsfNTY?si=112erPn3AXxVRG-n"
+        },
+        {
+            "id": 67,
+            "nombre": "Prince of Persia: The Lost Crown",
+            "genero": "Plataformas",
+            "lanzamiento": "2024/01/19",
+            "imagen": "/Styles/Images/Juegos/Play/68.jpg",
+            "video": "https://www.youtube.com/embed/Lr3BasglZAI?si=eljEPEP4D8JncHgn"
+        },
+        {
+            "id": 68,
+            "nombre": "Tekken 8",
+            "genero": "Lucha",
+            "lanzamiento": "2024/01/26",
+            "imagen": "/Styles/Images/Juegos/Play/69.jpg",
+            "video": "https://www.youtube.com/embed/mfdSc819CEY?si=Gq8eHyh6UHTZZ-Az"
+        }
+    ]
+}
