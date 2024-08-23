@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("template/head", {tituloWeb: "Cuentas Principales-Secundarias"}) %>
+    <link rel="stylesheet" href="./Styles/cuentasPrincipalesSecundarias.css">
+</head>
+<body>
+    <%- include("template/navbar") %>
+
+    <main class="main-container">
+        <div class="categorias-container">
+            <h1 class="text-center">Categorías de Cuentas</h1>
+            <p class="text-center paragraph">Ofrecemos dos categorías de cuentas para satisfacer tus necesidades: las cuentas <u>principales</u> y 
+                <u>secundarias</u>.</p>
+        </div>
+
+        <div class="disponible-container">
+            <h2 class="text-center">Disponibilidad de Juegos</h2>
+            <p class="paragraph">En nuestra plataforma, los juegos de PS5 están disponibles en la categoría <u>principal</u>, mientras que los de
+                PS4 pueden encontrarse
+                tanto en la categoría <u>principal</u> como en la <u>secundaria</u>.</p>
+        </div>
+        
+        <div class="funciones-container">
+            <h2 class="text-center">Funcionamiento de las Cuentas:</h2>
+            <ul>
+                <li class="list list-accounts"><strong>Cuenta principal:</strong> Al adquirir esta cuenta, se crea un nuevo usuario en tu consola con
+                    acceso al juego o suscripción deseada. Después de descargarlo, puedes disfrutar del juego en tu cuenta
+                    personal, acumulando logros y progresando en el mismo.</li>
+                <li class="list list-accounts"><strong>Cuenta secundaria:</strong> Con esta opción, también se genera un nuevo usuario en tu consola con
+                    acceso al juego adquirido. Sin embargo, es importante destacar que el progreso y los logros obtenidos no se
+                    guardarán en tu cuenta personal, sino en la cuenta proporcionada.</li>
+            </ul>
+        </div>
+
+        <div class="nota-container">
+            <h2 class="text-center">Características y condiciones</h2>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item list">
+                    Acceso al juego en línea (requiere membresía PsPlus).
+                </li>
+                <li class="list-group-item list">
+                    Único pago inicial, sin costos ocultos ni suscripciones adicionales. La cuenta está destinada exclusivamente
+                    para una sola
+                    consola.
+                </li>
+                <li class="list-group-item list-group-item-warning list">
+                    La cuenta no puede ser eliminada o cerrada por completo, ya que se requiere para descargas y sesiones de
+                    juego. En caso de
+                    eliminarla, será necesario adquirirla nuevamente para su reposición.
+                </li>
+                <li class="list-group-item list">
+                    Tiempo de entrega: El tiempo de entrega puede variar dependiendo del volumen de pedidos que recibamos. Sin
+                    embargo, nos
+                    comprometemos a procesar tu solicitud en un plazo aproximado de 1 a 4 horas después de confirmar tu pago.
+                </li>
+            </ol>
+        </div>
+        
+        <h4 class="text-center">Por último, aunque no contamos con un catálogo específico debido a la fluctuación constante de precios y disponibilidad, estamos 
+            aquí para atender tus necesidades personalizadas. No dudes en consultarnos sobre los juegos o suscripciones que te interesen, 
+            con gusto te proporcionaremos una cotización ajustada a tus requerimientos.</h4>
+            
+        <%- include("template/whatsapp") %>
+    </main>
+
+    <%- include("template/footer") %>
+</body>
+</html>

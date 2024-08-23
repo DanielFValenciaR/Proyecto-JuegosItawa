@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include("template/head", {tituloWeb: "Catálogo PlayStation"}) %>
+    <link rel="stylesheet" href="./Styles/catalogoPlay.css">
+    <link rel="stylesheet" href="./Styles/tarjetas.css">
+</head>
+<body id="body">
+    <%- include("template/navbar") %>
+
+    <main class="main-container">
+        <section class="intro-container">
+            <h1 class="text-center">Catálogo Juegos de PlayStation</h1>
+            <p class="text-center"><b>NOTA: </b>Leer primero ¿Qué son las <a href="/cuentas-principales-secundarias">Cuentas Principales-Secundarias</a>?<br>
+                <span>(Los juegos se encuentran por fecha de lanzamiento del más reciente al más antiguo)</span></p>
+        </section>
+
+        <section class="cards-container">
+            
+        </section>
+
+        <!-- paginacion -->
+        <section class="paginacion">
+            <!-- <li class="page-item previous-page disable"><a class="page-link" href="#"><</a></li>
+            <li class="page-item current-page active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">5</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">6</a></li>
+            <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+            <li class="page-item next-page"><a class="page-link" href="#">></a></li> -->
+        </section>
+
+        <%- include("template/whatsapp") %>
+    </main>
+
+    <%- include("template/footer") %>
+
+    <script type="module" src="./Scripts/catalogoXbox-Play.js"></script>
+
+</body>
+</html>

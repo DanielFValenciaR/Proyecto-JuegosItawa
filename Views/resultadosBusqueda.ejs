@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("template/head", {tituloWeb: "Resultados búsqueda"}) %>
+    <link rel="stylesheet" href="./Styles/resultadosBusqueda.css">
+    <link rel="stylesheet" href="./Styles/tarjetas.css">
+</head>
+<body>
+    <%- include("template/navbar") %>
+
+    <main>
+        <% if (resultados.length > 0) { %>
+            <h1 class="title-results">Resultados para "<%= busqueda %>":</h1>
+        <% } %>
+
+        <section class="cards-container">
+            <% if (resultados.length > 0) { %>
+                <% resultados.forEach(function(game) { %>
+                    <section class="card card-game">
+                        <div class="face front">
+                            <img src="<%= game.imagen %>" alt="Imagen videojuego <%= game.nombre %>">
+                        </div>
+                        <div class="face back <%= game.platform === 'xbox' ? 'xbox' : 'play' %>">
+                            <h3><%= game.nombre %></h3>
+                            <iframe width="100%" height="100%" src="<%= game.video %>" 
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="details-container">
+                                <ul>
+                                    <li><b>Género: </b><%= game.genero %></li>
+                                    <li><b>Lanzamiento: </b><%= new Date(game.lanzamiento).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) %></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                <% }) %>
+            <% } else { %>
+                <div class="not-found">
+                    <img src="/Styles/Images/NoEncontrado/no-results.svg" alt="Icono no encontrado">
+                    <span>Lo sentimos, no se encontraron resultados para su búsqueda:</span>
+                    <strong><u><%= query %></u></strong>
+                    <span>Pruebe con términos de búsqueda diferentes.</span>
+                </div>
+            <% } %>
+        </section>
+
+        <%- include("template/whatsapp") %>
+    </main>
+
+    <%- include("template/footer") %>
+
+</body>
+</html>

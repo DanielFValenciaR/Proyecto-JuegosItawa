@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include("template/head", {tituloWeb: "Juegos Itawa"}) %>
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+<body>
+    <%- include("template/navbar") %>
+
+    <main class="main-container">
+        <div class="content">
+            <div id="carouselE1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+    
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Styles/Images/Carousel/portada.jpg" class="d-block w-100"
+                            alt="Imagen de consola retro">
+                        <div class="carousel-caption">
+                            <h5>Los mejores Videojuegos Digitales los encuentras en <i><u>JuegosItawa</u></i></h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Styles/Images/Carousel/Xbox.jpg" class="d-block w-100" 
+                            alt="Imagen exclusivos Xbox">
+                        <div class="carousel-caption">
+                            <h5><b>Videojuegos Xbox</b></h5>
+                            <p>Manejamos Cuentas Compartidas</p>
+                            <p><a href="/cuentas-compartidas" class="btn btn-success mt-3">Leer más</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Styles/Images/Carousel/Playstation.jpg" class="d-block w-100"
+                            alt="Imagen exclusivos PlayStation">
+                        <div class="carousel-caption">
+                            <h5><b>Videojuegos PlayStation</b></h5>
+                            <p>Manejamos Cuentas Principales como Cuentas Secundarias</p>
+                            <p><a href="/cuentas-principales-secundarias" class="btn btn-primary mt-3">Leer más</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselE1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselE1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    
+            <section class="introduction" id="intro">
+                <h1 class="text-center">¡Bienvenidos a JuegosITAWA!</h1>
+                <p>Somos un equipo de apasionados por los videojuegos, unidos por el deseo de brindar una experiencia segura
+                    y emocionante
+                    a nuestros clientes. Con sede en la encantadora ciudad de Manizales, Colombia, nos enorgullece presentar
+                    una plataforma
+                    dedicada a los juegos digitales, diseñada con atención a cada detalle para satisfacer las necesidades de
+                    los aficionados
+                    más exigentes.
+                </p>
+                <p>
+                    En JuegosITAWA, comprendemos la importancia de la confianza y la transparencia en el mundo del gaming.
+                    Como familia con una pasión compartida por los videojuegos, nos hemos comprometido a garantizar la
+                    seguridad y la
+                    satisfacción de nuestros clientes en cada paso del proceso. Desde la selección cuidadosa de nuestro
+                    catálogo hasta la
+                    atención personalizada al cliente, cada decisión que tomamos está impulsada por nuestro compromiso
+                    inquebrantable con la
+                    calidad y la excelencia.
+                </p>
+                <h3 class="text-center">¡Gracias por elegir JuegosITAWA, donde la diversión y la seguridad van de la mano!</h3>
+            </section>
+    
+            <section class="xbox-container">
+                <div class="video-xbox">
+                    <h2 class="text-center">Exclusivos de Xbox para el 2024</h2>
+                    <div class="ratio ratio-21x9">
+                        <iframe src="https://www.youtube.com/embed/0ji5bnLel28?si=p0FnqTAcycvbc6Zm"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="games-xbox">
+                    <h2>Recomendados de Xbox:</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-xbox shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Xbox/26.jpg" class="card-img-top" alt="Imagen Forza Motorsport ">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Forza Motorsport</h5>
+                                    <p class="card-text">Construye mejor que la competencia en una carrera profesional totalmente nueva. Corre contra
+                                        tus amigos en el modo multijugador. Compite con más de 500 autos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-xbox shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Xbox/64.jpg" class="card-img-top" alt="Imagen Elden Ring">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Elden Ring + Dlc Shadow Of The Erdtree</h5>
+                                    <p class="card-text">Déjate guiar por la gracia para usar el poder del Anillo de Elden y conviértete en un Señor de
+                                        Elden en las Tierras Intermedias.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-xbox shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Xbox/27.jpg" class="card-img-top" alt="Imagen Cyberpunk 2077">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Cyberpunk 2077 + Phantom Liberty</h5>
+                                    <p class="card-text">Cyberpunk 2077 es un RPG de acción y aventura de mundo abierto ambientado en el oscuro futuro
+                                        de Night City. Actualización de juego masiva.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-xbox shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Xbox/39.jpg" class="card-img-top" alt="Imagen Starfield">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Starfield</h5>
+                                    <p class="card-text">Crea el personaje que quieras y explora con una libertad sin precedentes mientras te embarcas
+                                        en un viaje épico para desentrañar el mayor misterio de la humanidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a href="/catalogo=xbox" class="btn btn-success">Ver todo</a>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="playstation-container">
+                <div class="video-playstation">
+                    <h2 class="text-center">Exclusivos de PlayStation para el 2024</h2>
+                    <div class="ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8eEQuyN67B8?si=vIaW5WgjNMVMOQ6A"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="games-playstation">
+                    <h2>Recomendados de PlayStation:</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-play shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Play/4.jpg" class="card-img-top" alt="Imagen God of War Ragnarök">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">God of War Ragnarök</h5>
+                                    <p class="card-text">Kratos y Atreus deben viajar a cada uno de los nueve reinos en búsqueda de respuestas, mientras
+                                        que las fuerzas asgardianas se preparan para una batalla profetizada.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-play shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Play/11.jpg" class="card-img-top" alt="Imagen The Last of Us Part I">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">The Last of Us Part I</h5>
+                                    <p class="card-text">Perdura y sobrevive. Conoce la emocionante historia y a los entrañables personajes de The Last
+                                        of Us, ganador de más de 200 premios del Juego del año.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-play shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Play/51.jpg" class="card-img-top" alt="Imagen Horizon Forbidden West">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Horizon Forbidden West</h5>
+                                    <p class="card-text">Únete a Aloy mientras desafía el Oeste Prohibido, una frontera majestuosa, aunque peligrosa, en
+                                        la que se ocultan nuevas y misteriosas amenazas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3">
+                            <div class="card card-play shadow-sm">
+                                <div class="text-center">
+                                    <img src="./Styles/Images/Juegos/Play/47.jpg" class="card-img-top" alt="Imagen Marvel's Spider-Man">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Marvel's Spider-Man</h5>
+                                    <p class="card-text">Los mundos de Peter Parker y Spider-Man chocan en una historia original repleta de acción. Desarrollado por Insomniac Games y distribuido por Sony Interactive Entertainment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2 mb-2">
+                        <a href="/catalogo=playstation" class="btn btn-primary">Ver todo</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <%- include("template/whatsapp") %>
+    </main>
+
+    <%- include("template/footer") %>
+
+</body>
+</html>
