@@ -519,6 +519,118 @@
             "lanzamiento": "2024/04/26",
             "imagen": "/Styles/Images/Juegos/Xbox/66.jpg",
             "video": "https://www.youtube.com/embed/IDGa6H3-aCY?si=s3IBGQ9kQiQGVBtH"
+        },
+        {
+            "id": 66,
+            "nombre": "MotoGP 24",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2024/05/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/67.jpg",
+            "video": "https://www.youtube.com/embed/4DZexLvh4EM?si=lxO_E9JwVM6xs8Rk"
+        },
+        {
+            "id": 67,
+            "nombre": "F1 24",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2024/05/31",
+            "imagen": "/Styles/Images/Juegos/Xbox/68.jpg",
+            "video": "https://www.youtube.com/embed/hqu82ordoy4?si=-fZE0NY7vAK5sekg"
+        },
+        {
+            "id": 68,
+            "nombre": "Tour de France 2024",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2024/06/06",
+            "imagen": "/Styles/Images/Juegos/Xbox/69.jpg",
+            "video": "https://www.youtube.com/embed/GmtFA1MEHcU?si=zc74ThtiL81aZwj0"
+        },
+        {
+            "id": 69,
+            "nombre": "MVP Bundle EA SPORTS",
+            "genero": "Deportes",
+            "lanzamiento": "2024/08/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/70.jpg",
+            "video": "https://www.youtube.com/embed/W1QDaXkufCo?si=k_TAy95LkoyaNf3i"
+        },
+        {
+            "id": 70,
+            "nombre": "Demon Slayer-Sweep the Board!",
+            "genero": "Juegos de mesa",
+            "lanzamiento": "2024/07/16",
+            "imagen": "/Styles/Images/Juegos/Xbox/71.jpg",
+            "video": "https://www.youtube.com/embed/6XvYNK2pTO4?si=RdsKfMqj6GeELsPX"
+        },
+        {
+            "id": 71,
+            "nombre": "F1 Manager 2024",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2024/07/23",
+            "imagen": "/Styles/Images/Juegos/Xbox/72.jpg",
+            "video": "https://www.youtube.com/embed/8LoKSdzT89A?si=5iXeCWvytZtwZnid"
+        },
+        {
+            "id": 72,
+            "nombre": "7 Days to Die",
+            "genero": "Survival Horror",
+            "lanzamiento": "2024/06/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/73.jpg",
+            "video": "https://www.youtube.com/embed/kikTJaVBank?si=1AR9n62L4z_s8vJW"
+        },
+        {
+            "id": 73,
+            "nombre": "Kena: Bridge of Spirits",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2024/08/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/74.jpg",
+            "video": "https://www.youtube.com/embed/lMR8u6ErXMQ?si=O4Br7VJppKtlXX3l"
+        },
+        {
+            "id": 74,
+            "nombre": "TIEBREAK - Ace Edition",
+            "genero": "Deportes",
+            "lanzamiento": "2024/08/22",
+            "imagen": "/Styles/Images/Juegos/Xbox/75.jpg",
+            "video": "https://www.youtube.com/embed/CL19RAOXJf8?si=8gXxRA9687KGaYIO"
+        },
+        {
+            "id": 75,
+            "nombre": "Assassin's Creed Shadows",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2024/11/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/76.jpg",
+            "video": "https://www.youtube.com/embed/u2hUoIPgL2A?si=aTmp_EbjHawcJBWN"
+        },
+        {
+            "id": 76,
+            "nombre": "DRAGON BALL Sparking! ZERO",
+            "genero": "Lucha-Acción",
+            "lanzamiento": "2024/10/10",
+            "imagen": "/Styles/Images/Juegos/Xbox/77.jpg",
+            "video": "https://www.youtube.com/embed/BfzYtPwVZ6A?si=K_wwdMAY2U65Byxo"
+        },
+        {
+            "id": 77,
+            "nombre": "EA SPORTS FC 25",
+            "genero": "Deportes",
+            "lanzamiento": "2024/09/27",
+            "imagen": "/Styles/Images/Juegos/Xbox/78.jpg",
+            "video": "https://www.youtube.com/embed/pBM2xyco_Kg?si=9x58cuwQZ3sFByne"
+        },
+        {
+            "id": 78,
+            "nombre": "NBA 2K25",
+            "genero": "Deportes",
+            "lanzamiento": "2024/09/06",
+            "imagen": "/Styles/Images/Juegos/Xbox/79.jpg",
+            "video": "https://www.youtube.com/embed/hT6XLIrDrEU?si=aKFMdC12fG0l3iYS"
+        },
+        {
+            "id": 79,
+            "nombre": "Star Wars Outlaws",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2024/08/30",
+            "imagen": "/Styles/Images/Juegos/Xbox/80.jpg",
+            "video": "https://www.youtube.com/embed/pTcvtSfDkCM?si=Q6DOA7S_EnMm29aF"
         }
     ],
     "playstation":[
