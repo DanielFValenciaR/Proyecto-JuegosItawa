@@ -1,126 +1,145 @@
-// Forzar el scroll hasta la parte superior cuando la página se recarga
+// Forzar el scroll hasta la parte superior de la pantalla cuando la página se recarga
 window.scrollTo(0, 0);
 
-// Función para obtener la lista de páginas para la paginación
+// Función matemática para generar los números de la paginación (ej: 1, 2, ..., 5, 6, 7, ..., 10)
 function getPageList(totalPages, page, maxLength) {
 
-    // Función auxiliar que genera un array de números en un rango dado
+    // Función auxiliar que crea un array de números secuenciales (ej: range(1,5) devuelve [1,2,3,4,5])
     function range(start, end) {
-        // Crea un array que contiene todos los números enteros desde 'start' hasta 'end'
-        // Por ejemplo, range(1, 5) devolverá [1, 2, 3, 4, 5]
         return Array.from(Array(end - start + 1), (_, i) => i + start);
     }
 
-    // Determina el ancho de los lados en la paginación.
-    // Si maxLength es menor que 9, el valor de sideWidth es 1; de lo contrario, es 2.
+    // Determina cuántos números mostrar a los lados dependiendo del tamaño máximo permitido
     let sideWidth = maxLength < 9 ? 1:2;
-
-    // Calcula el ancho del lado izquierdo de la paginación
-    // Esto distribuye el espacio restante de manera uniforme entre los lados izquierdo y derecho
     let leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
-    
-    /// El lado derecho tiene el mismo ancho que el lado izquierdo
     let rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
 
-    // Si el total de páginas es menor o igual a maxLength, se devuelven todas las páginas
+    // Si el total de páginas es pequeño, simplemente devuelve todos los números (ej: 1, 2, 3)
     if (totalPages <= maxLength) {
         return range(1, totalPages);
     }
 
-    // Caso 1: La página actual está al principio de la paginación
-    // Muestra un rango de páginas iniciales seguido de "..."
+    // Caso 1: Estamos en las primeras páginas (Muestra el inicio y recorta el final con "...")
     if (page <= maxLength - sideWidth - 1 - rightWidth) {
         return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
     }
 
-    // Caso 2: La página actual está cerca del final de la paginación
-    // Muestra "..." seguido de un rango de páginas finales
+    // Caso 2: Estamos en las últimas páginas (Recorta el inicio con "..." y muestra el final)
     if (page >= totalPages - sideWidth - 1 - rightWidth) {
         return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
     }
 
-    // Caso 3: La página actual está en el medio de la paginación
-    // Muestra los primeros y últimos números de página, con "..." en medio
+    // Caso 3: Estamos en el medio (Muestra inicio, "...", números actuales, "...", final)
     return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages)); 
 }
 
-// Función para hacer una petición GET y procesar el resultado con un callback
+// Función asíncrona para descargar el archivo JSON con todo el catálogo
 async function fetchGet(url, callback) {
     try {
-        const res = await fetch(url); // Realiza la solicitud a la URL especificada
-        const data = await res.json(); // Convierte la respuesta a formato JSON
-        callback(data); // Llama a la función callback pasando los datos obtenidos
+        const res = await fetch(url); // Pide el archivo al servidor
+        const data = await res.json(); // Lo convierte a un formato que JavaScript pueda leer
+        callback(data); // Ejecuta el resto del código enviándole estos datos listos
     } catch (error) {
         console.error('Error al cargar los datos:', error);
     }
 }
 
+// Espera a que todo el HTML de la página termine de cargar antes de ejecutar este código
 document.addEventListener("DOMContentLoaded", function() {
-    let cardsContainer = document.querySelector(".cards-container"); // Obtiene el contenedor donde se mostrarán las tarjetas de juegos
-    let urlParams = new URLSearchParams(window.location.search); // Obtiene los parámetros de la URL
-    let path = window.location.pathname;  // Obtiene el nombre de la plataforma desde la ruta de la URL
-    let platform = path.split('=')[1]; // Obtiene 'xbox' o 'playstation'
+    let cardsContainer = document.querySelector(".cards-container"); // Selecciona la caja donde irán los juegos
+    let urlParams = new URLSearchParams(window.location.search); // Lee los parámetros de la URL (ej: ?page=2)
+    let path = window.location.pathname; // Lee la ruta actual (ej: /catalogo=xbox)
+    let platform = path.split('=')[1]; // Extrae solo el nombre de la plataforma ('xbox' o 'playstation')
     
+    // Llamamos a nuestro JSON y le pasamos la información
     fetchGet('/Data/catalogo.json', function (data) {
-        let games = data[platform]; // Obtiene los juegos correspondientes a la plataforma seleccionada
+        let games = data[platform]; // Extraemos únicamente los juegos de la plataforma en la que estamos
 
-        // Verifica si hay juegos y si la variable es un array
+        // Verificamos que la información exista y sea una lista válida
         if (games && Array.isArray(games)) {
-            games.forEach(games => {
-                const gameSection = document.createElement('section'); // Crea un nuevo elemento de sección para cada tarjeta de juego
-                gameSection.classList.add('card');
-                // Establece atributos de lanzamiento y video para la tarjeta
-                gameSection.setAttribute('data-launch', games.lanzamiento);
-                gameSection.setAttribute('data-video', games.video);
+            
+            // 🚀 SOLUCIÓN 1: ORDENAR EL JSON ANTES DE DIBUJAR
+            // Aquí ordenamos la base de datos de juegos comparando sus fechas de lanzamiento.
+            games.sort(function(a, b) {
+                let fechaA = new Date(a.lanzamiento);
+                let fechaB = new Date(b.lanzamiento);
+                
+                // Escudo protector: Si la fecha dice "Fecha no encontrada", la mandamos al año 1900 
+                // para que esos juegos queden al final y no rompan el orden de los nuevos.
+                if (isNaN(fechaA.getTime())) fechaA = new Date("1900-01-01");
+                if (isNaN(fechaB.getTime())) fechaB = new Date("1900-01-01");
 
-                // Define la clase de fondo según la plataforma (verde para Xbox, azul para PlayStation)
+                // Restamos la fecha B menos la A para que el orden sea Descendente (más nuevos arriba)
+                return fechaB - fechaA; 
+            });
+
+            // Recorremos la lista de juegos (ya ordenada) uno por uno
+            games.forEach(juego => {
+                const gameSection = document.createElement('section'); // Crea la tarjeta del juego
+                gameSection.classList.add('card');
+                
+                // Le guardamos atributos ocultos con su fecha y link de video
+                gameSection.setAttribute('data-launch', juego.lanzamiento);
+                gameSection.setAttribute('data-video', juego.video);
+
+                // Define el color de fondo de la tarjeta (verde si es Xbox, azul si es Play)
                 const backClass = platform === 'xbox' ? 'xbox' : 'play';
 
-                // Convierte la fecha de lanzamiento en un objeto de fecha y la formatea
-                let lanzamiento = new Date(games.lanzamiento);
-                let opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
-                const fecha = lanzamiento.toLocaleDateString('es-ES', opcionesFecha);
+                // Intentamos convertir el texto de la fecha a un formato real (DD/MM/YYYY)
+                let lanzamiento = new Date(juego.lanzamiento);
+                let fechaTexto = "Fecha no disponible";
+                
+                // Si la fecha es válida, la formateamos al estilo español
+                if (!isNaN(lanzamiento.getTime())) {
+                    let opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                    fechaTexto = lanzamiento.toLocaleDateString('es-ES', opcionesFecha);
+                } else {
+                    // Si decía "Fecha no encontrada", dejamos el texto original tal cual
+                    fechaTexto = juego.lanzamiento; 
+                }
     
-                // Establece el contenido HTML de la tarjeta de juego
+                // Inyectamos todo el diseño HTML dentro de la tarjeta
                 gameSection.innerHTML = `
                     <div class="face front">
-                        <img src="${games.imagen}" alt="Imagen videojuego ${games.nombre}">
+                        <img src="${juego.imagen}" alt="Imagen videojuego ${juego.nombre}">
                     </div>
                     <div class="face back ${backClass}">
-                        <h3>${games.nombre}</h3>
-                        <iframe width="100%" height="100%" src="${games.video}" 
+                        <h3>${juego.nombre}</h3>
+                        <iframe width="100%" height="100%" src="${juego.video}" 
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <div class="details-container">
                             <ul>
-                                <li><b>Género: </b>${games.genero}</li>
-                                <li><b>Lanzamiento: </b>${fecha}</li>
+                                <li><b>Género: </b>${juego.genero}</li>
+                                <li><b>Lanzamiento: </b>${fechaTexto}</li>
                             </ul>
                         </div>
                     </div>`;
                 
+                // Agregamos esta tarjeta física al contenedor en la pantalla
                 cardsContainer.appendChild(gameSection);
             });
             
-            let numberOfItems = document.querySelectorAll(".cards-container .card").length; // Obtiene el número total de tarjetas y calcula el número total de páginas necesarias
-            let limitPerPage = getLimitPerPage(); // Cuantas tarjetas visibles por página
-            let totalPages = Math.ceil(numberOfItems / limitPerPage);
-            let paginationSize = getPaginationSize(); // Tamaño de la paginación
+            // --- CÁLCULOS DE LA PAGINACIÓN ---
+            let numberOfItems = document.querySelectorAll(".cards-container .card").length; // Cuenta cuántos juegos hay en total
+            let limitPerPage = getLimitPerPage(); // Obtiene cuántos juegos caben por página
+            let totalPages = Math.ceil(numberOfItems / limitPerPage); // Calcula cuántas páginas habrá en total
+            let paginationSize = getPaginationSize(); // Define el tamaño visual de los botones numéricos
             
-            // Obtener el número de página actual de la URL
+            // Lee la URL para saber en qué página estamos (si no hay ninguna, asume la página 1)
             let currentPage = parseInt(urlParams.get('page')) || 1;
 
-            // Calcular el límite de tarjetas por página según el tamaño de la pantalla
+            // Función para decidir cuántas tarjetas mostrar según si estamos en PC, tablet o celular
             function getLimitPerPage() {
                 if (window.innerWidth < 1200) {
-                    return 8; // Si la pantalla es mediana, mostrar 8 tarjetas por página
+                    return 8; // Pantallas medianas/pequeñas: 8 tarjetas
                 } else {
-                    return 9; // Si la pantalla es grande, mostrar 9 tarjetas por página
+                    return 9; // Pantallas grandes: 9 tarjetas (cuadrícula perfecta de 3x3)
                 }
             };
 
-            // Función para calcular el tamaño de la paginación según el tamaño de la pantalla
+            // Función para hacer más pequeña la barra de paginación en celulares
             function getPaginationSize() {
                 if (window.innerWidth < 768) {
                     return 5; 
@@ -131,123 +150,102 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             };
 
-            // Función que muestra una página específica de tarjetas
+            // 🚀 EL MOTOR PRINCIPAL: Función que se encarga de mostrar la página correcta
             function showPage(wichPage) {
+                // Si piden una página que no existe (ej: página -1 o página 100), no hace nada
                 if (wichPage < 1 || wichPage > totalPages) return false;
                 currentPage = wichPage;
 
-                // Actualizar la URL con el número de página actual
+                // Cambia la URL en la barra de direcciones del navegador sin recargar la página
                 history.pushState(null, null, `/catalogo=${platform}?page=${currentPage}`);
 
-                // Desplazar la página hacia arriba con un desplazamiento más suave
-                // window.scrollTo({
-                //     top: 100,
-                //     behavior: "smooth", // Desplazamiento suave
-                // });
-
-                // Ocultar todos los iframes de YouTube
+                // APAGAR VIDEOS: Le quita el link a todos los iframes para que los videos 
+                // de las páginas ocultas dejen de consumir internet y memoria.
                 let youtubeIframes = document.querySelectorAll(".cards-container .card iframe");
                 youtubeIframes.forEach(function(iframe) {
                     iframe.setAttribute("loading", "lazy");
                     iframe.removeAttribute("src");
                 });
 
-                // Calcula los índices de inicio y fin para las tarjetas a mostrar en la página actual
+                // Calcula desde qué tarjeta hasta qué tarjeta se deben mostrar en esta página
+                // Ej página 1: Del índice 0 al 9. Página 2: Del 9 al 18.
                 let startIndex = (currentPage - 1) * limitPerPage;
                 let endIndex = currentPage * limitPerPage;
 
-                // Convierte la lista de tarjetas en un array para manipularlas
-                let cards = Array.from(document.querySelectorAll(".cards-container .card"));
+                // 🚀 SOLUCIÓN 2: OCULTAR Y MOSTRAR SIN DESORDENAR
+                let cards = document.querySelectorAll(".cards-container .card");
 
-                // Ordena las tarjetas según la fecha de lanzamiento
-                cards.sort(function(a, b) {
-                    return new Date(b.dataset.launch) - new Date(a.dataset.launch);
-                });
-
-                // Muestra u oculta las tarjetas según el rango de índices calculado
+                // Recorremos todas las tarjetas físicas
                 cards.forEach(function (card, index) {
+                    // Si el juego está dentro del rango de esta página...
                     if (index >= startIndex && index < endIndex) {
-                        cardsContainer.appendChild(card);
-                        card.style.display = "block";
+                        card.style.display = "block"; // ...lo hacemos visible
 
-                        // Establece la URL del video de YouTube para los iframes visibles
+                        // Y le inyectamos su link de video correspondiente para que se pueda reproducir
                         let iframe = card.querySelector("iframe");
-                        let videoUrl = card.dataset.video; // Obtener la URL del video de YouTube almacenada en el atributo data-video de la tarjeta
-                        if (iframe && videoUrl) {
+                        let videoUrl = card.dataset.video; 
+                        if (iframe && videoUrl && videoUrl !== "No se pudo extraer") {
                             iframe.setAttribute("src", videoUrl);
                         }
                     } else {
+                        // Si no pertenece a esta página, lo ocultamos (sin borrarlo del HTML)
                         card.style.display = "none";
                     }
                 });
 
-                updatePagination(); // Actualiza la paginación después de mostrar la página
-
+                updatePagination(); // Actualiza los colores y botones numéricos de abajo
                 return true;
             };
 
-            // Función para actualizar los elementos de la paginación
+            // Función que redibuja la barra de numeritos abajo (1, 2, ..., 8, 9)
             function updatePagination() {
-                // Selecciona todos los elementos <li> dentro de la paginación
                 let paginationItems = document.querySelectorAll(".paginacion li");
 
-                // Elimina todos los elementos de la paginación, excepto el primero (botón de "página anterior")
-                // y el último (botón de "página siguiente")
+                // Borra todos los números viejos, dejando solo los botones de "Anterior" (<) y "Siguiente" (>)
                 for (let i = 1; i < paginationItems.length - 1; i++) {
                     paginationItems[i].parentNode.removeChild(paginationItems[i]);
                 }
 
-                // Genera y agrega los elementos de la paginación según la página actual y el total de páginas
+                // Genera la nueva lista matemática de botones numéricos
                 getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-
-                    // Crea un nuevo elemento <li> para cada página o punto suspensivo
                     let liElement = document.createElement("li");
-                    liElement.classList.add("page-item"); // Agregar clases al elemento <li>
+                    liElement.classList.add("page-item"); 
 
-                    // Si 'item' es un número de página válido, agrega la clase 'current-page
+                    // Si es un número le pone la clase "current-page", si es un 0 lo vuelve "..."
                     if (item) {
                         liElement.classList.add("current-page");
                     } else {
-                        // Si 'item' es 0, significa que es un punto suspensivo, agrega la clase 'dots'
                         liElement.classList.add("dots");
                     }
 
-                     // Si el número de página corresponde a la página actual, marca el elemento como activo
+                    // Si es la página en la que estamos parados, la pinta de azul/verde (active)
                     if (item === currentPage) {
                         liElement.classList.add("active");
                     }
 
-                   // Crea el elemento <a> que contendrá el número de página o los puntos suspensivos
+                    // Crea el enlace (<a>) clickeable
                     let aElement = document.createElement("a");
-
-                    // Agregar clase al elemento <a>
                     aElement.classList.add("page-link");
-
-                    // Establece el atributo href para el elemento <a> con un valor vacío
-                    // El valor 'javascript:void(0)' evita que la página se recargue al hacer clic
                     aElement.setAttribute("href", "javascript:void(0)");
-
-                    // Establece el contenido del enlace, que puede ser un número de página o "..."
-                    aElement.textContent = item || "...";
-
-                    // Inserta el enlace dentro del elemento <li>
+                    aElement.textContent = item || "..."; // Escribe el número o los puntos suspensivos
                     liElement.appendChild(aElement);
 
-                    // Inserta el elemento <li> antes del elemento con la clase "next-page"
+                    // Inserta este nuevo botón numérico justo antes del botón ">"
                     let nextPageElement = document.querySelector(".next-page");
                     nextPageElement.parentNode.insertBefore(liElement, nextPageElement);
                 });
 
-                // Desactiva el botón de "página anterior" si estamos en la primera página
+                // Si estamos en la página 1, apaga (disable) el botón de retroceder "<"
                 let previousPageElement = document.querySelector(".previous-page");
                 previousPageElement.classList.toggle("disable", currentPage === 1);
 
-                // Desactiva el botón de "página siguiente" si estamos en la última página
+                // Si estamos en la última página, apaga el botón de avanzar ">"
                 let nextPageElement = document.querySelector(".next-page");
                 nextPageElement.classList.toggle("disable", currentPage === totalPages);
             };
 
-            // Crear elementos y configurar atributos y clases para los botones de página anterior y siguiente
+            // --- CREACIÓN DE BOTONES FIJOS ---
+            // Construye el botón "Anterior" (<)
             let previousPageListItem = document.createElement("li");
             previousPageListItem.classList.add("page-item");
             previousPageListItem.classList.add("previous-page");
@@ -257,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
             previousPageLink.setAttribute("href", "javascript:void(0)");
             previousPageLink.textContent = "<";
 
+            // Construye el botón "Siguiente" (>)
             let nextPageListItem = document.createElement("li");
             nextPageListItem.classList.add("page-item");
             nextPageListItem.classList.add("next-page");
@@ -266,54 +265,42 @@ document.addEventListener("DOMContentLoaded", function() {
             nextPageLink.setAttribute("href", "javascript:void(0)");
             nextPageLink.textContent = ">";
 
-            // Adjuntar elementos para los botones de página anterior y siguiente
             previousPageListItem.appendChild(previousPageLink);
             nextPageListItem.appendChild(nextPageLink);
 
-            // Adjuntar los elementos de la paginación a la lista de paginación en el DOM
             let paginationList = document.querySelector(".paginacion");
             paginationList.appendChild(previousPageListItem);
             paginationList.appendChild(nextPageListItem);
 
-            // Mostrar las tarjetas de la página actual
+            // EJECUCIÓN INICIAL: Muestra la página 1 al apenas cargar la web
             showPage(currentPage);
 
-            // Manejar eventos de clic en los enlaces de paginación para cambiar de página
+            // --- EVENTOS DE CLIC ---
+            // Escucha cuando el usuario hace clic en cualquier NÚMERO de la paginación
             document.addEventListener("click", function(event) {
-                // Verificar si el clic ocurrió en un elemento <a> dentro de un <li> con la clase "current-page"
+                // Si hizo clic en un número que NO es en el que ya está parado...
                 if (event.target.matches(".paginacion li.current-page:not(.active) a")) {
-                    // Obtiene el número de página del texto del enlace que fue clicado
-                    let pageNumber = +event.target.textContent;
-
-                    // Desplazarse al elemento específico
-                    cardsContainer.scrollIntoView({ behavior: "smooth" });
+                    let pageNumber = +event.target.textContent; // Lee el número
+                    cardsContainer.scrollIntoView({ behavior: "smooth" }); // Sube la pantalla suavemente
                     event.preventDefault();
-
-                    // Llamar a la función showPage con el número de página
-                    return showPage(pageNumber);
+                    return showPage(pageNumber); // Ejecuta la magia para mostrar esa página
                 }
             });   
     
-            // Manejar evento de clic en el botón de página siguiente
+            // Escucha cuando el usuario hace clic en el botón ">"
             let nextPageElement = document.querySelector(".next-page");
             nextPageElement.addEventListener("click", function(event) {
-                // Desplazarse al elemento específico
                 cardsContainer.scrollIntoView({ behavior: "smooth" });
                 event.preventDefault();
-
-                // Incrementa el número de página y muestra la nueva página
-                return showPage(currentPage + 1);
+                return showPage(currentPage + 1); // Suma 1 a la página actual
             });
 
-            // Manejar evento de clic en el botón de página anterior
+            // Escucha cuando el usuario hace clic en el botón "<"
             let previousPageElement = document.querySelector(".previous-page");
             previousPageElement.addEventListener("click", function(event) {
-                // Desplazarse al elemento específico
                 cardsContainer.scrollIntoView({ behavior: "smooth" });
                 event.preventDefault();
-
-                // Decrementa el número de página y muestra la nueva página
-                return showPage(currentPage - 1);
+                return showPage(currentPage - 1); // Resta 1 a la página actual
             });
         };
     });
