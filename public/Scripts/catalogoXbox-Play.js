@@ -99,6 +99,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     fechaTexto = juego.lanzamiento; 
                 }
     
+                // MAGIA WHATSAPP: Creamos un enlace dinámico para cada juego
+                let numeroWhatsApp = "3206976330"; 
+                let mensaje = `Hola *Juegos Itawa*, me gustaría recibir información sobre el siguiente juego: *${juego.nombre}*`;
+                // Codificamos el texto para que los espacios y caracteres sean compatibles con enlaces web
+                let linkWpp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    
                 // Establece el contenido HTML de la tarjeta de juego
                 gameSection.innerHTML = `
                     <div class="face front">
@@ -116,6 +122,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <li><b>Lanzamiento: </b>${fechaTexto}</li>
                                 <li><b>Precio: </b>${juego.precio}</li>
                             </ul>
+                            <a href="${linkWpp}" target="_blank" class="btn-whatsapp-card">
+                                📲 Pedir por WhatsApp
+                            </a>
                         </div>
                     </div>`;
                 
