@@ -55,12 +55,12 @@
 .card .back h3 {
     margin: 0 0 5px 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
-    min-height: 38px; /* Espacio exacto para 2 líneas */
+    min-height: 54px; /* Espacio exacto para 3 líneas */
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limitamos a 2 líneas para mayor elegancia */
-    line-clamp: 2;
+    -webkit-line-clamp: 3; /* Limitamos a 3 líneas para mayor elegancia */
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -69,21 +69,24 @@
 /* Reproductor de Video */
 .card .back iframe {
     width: 100%;
-    height: 175px !important; /* Video más imponente */
+    height: 145px !important; /* Proporción 16:9 real que ahorra espacio valioso */
     border-radius: 8px;
     border: none;
-    margin: auto 0; /* MAGIA: Centra el video en el espacio restante automáticamente */
+    /* margin: auto 0; MAGIA: Centra el video en el espacio restante automáticamente */
+    margin-bottom: auto; /* Empuja la información y el botón hacia abajo */
     box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Sombra para resaltar el video */
 }
 
 /* Contenedor de Ficha Técnica */
 .card .back .details-container {
-    margin-top: 0;
+    margin-top: 8px; /* Separación sutil del video */
+    display: flex;
+    flex-direction: column;
 }
 
 .card .back ul {
     list-style: none;
-    padding: 12px; /* Espaciado interno de la caja */
+    padding: 8px 12px; /* Padding ajustado para compactar la caja */
     margin: 0;
     background: rgba(0, 0, 0, 0.25); /* Fondo oscuro elegante */
     border-radius: 8px;
@@ -91,7 +94,7 @@
 }
 
 .card .back li {
-    margin-bottom: 6px;
+    margin-bottom: 4px; /* Textos más compactos */
     font-size: 13.5px;
     line-height: 1.3;
     letter-spacing: 0.3px; /* Mejora la legibilidad de los datos */
@@ -99,6 +102,31 @@
 
 .card .back li:last-child {
     margin-bottom: 0; /* Elimina el margen del último elemento para que encaje perfecto */
+}
+
+/* =========================================
+    Botón Inteligente de WhatsApp
+========================================= */
+.btn-whatsapp-card {
+    display: block;
+    text-align: center;
+    background-color: #25D366; 
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 6px 0; /* Padding más compacto para encajar en el límite de la tarjeta */
+    margin-top: 8px; /* Separación con la lista de precio */
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-card:hover {
+    background-color: #20b858;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
 }
 
 /* Efecto de rotación 3D */
@@ -126,6 +154,7 @@
 .card-game .face.back.play {
     background-color: #0070D1;
 } */
+
 
 /* Resultado no encontrado */
 
