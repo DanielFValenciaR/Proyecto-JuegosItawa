@@ -5347,6 +5347,406 @@
             "video": "https://www.youtube.com/embed/lLrRA68vMCc?feature=oembed",
             "precio": "$40.000",
             "url_producto": "https://statefoxgames.com/product/wwe-2k26-edicion-monday-night-war/"
+        },
+        {
+            "id": 537,
+            "nombre": "007 First Light",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/26",
+            "imagen": "/Styles/Images/Juegos/Xbox/538.jpg",
+            "video": "https://www.youtube.com/embed/nTUoIyTMw0Q?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/007-first-light/"
+        },
+        {
+            "id": 538,
+            "nombre": "Akuma Rise Special Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/07",
+            "imagen": "/Styles/Images/Juegos/Xbox/539.jpg",
+            "video": "https://www.youtube.com/embed/-uDtTp5mxYQ?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/akuma-rise-special-edition/"
+        },
+        {
+            "id": 539,
+            "nombre": "Assassin’s Creed Black Flag Resynced Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/07/09",
+            "imagen": "/Styles/Images/Juegos/Xbox/540.jpg",
+            "video": "https://www.youtube.com/embed/U9EmVkQ5v54?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/assassins-creed-black-flag-resynced-deluxe-edition/"
+        },
+        {
+            "id": 540,
+            "nombre": "Avatar Legends The Fighting Game Digital Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/07/23",
+            "imagen": "/Styles/Images/Juegos/Xbox/541.jpg",
+            "video": "https://www.youtube.com/embed/nboz6eLKoaQ?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/avatar-legends-the-fighting-game-digital-deluxe-edition/"
+        },
+        {
+            "id": 541,
+            "nombre": "Bluey’s Quest for the Gold Pen",
+            "genero": "Plataformas-Aventura",
+            "lanzamiento": "2026/05/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/542.jpg",
+            "video": "https://www.youtube.com/embed/oKU8x4jIFO8?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/blueys-quest-for-the-gold-pen/"
+        },
+        {
+            "id": 542,
+            "nombre": "Darwin’s Paradox!",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/04/02",
+            "imagen": "/Styles/Images/Juegos/Xbox/543.jpg",
+            "video": "https://www.youtube.com/embed/qpcreDiiVhs?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/darwins-paradox/"
+        },
+        {
+            "id": 543,
+            "nombre": "Directive 8020",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/12",
+            "imagen": "/Styles/Images/Juegos/Xbox/544.jpg",
+            "video": "https://www.youtube.com/embed/61OMILUgVyo?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/directive-8020/"
+        },
+        {
+            "id": 544,
+            "nombre": "EA SPORTS FC 27",
+            "genero": "Deportes",
+            "lanzamiento": "2026/09/18",
+            "imagen": "/Styles/Images/Juegos/Xbox/545.jpg",
+            "video": "https://www.youtube.com/embed/MOclJJ7IpSY?start=6&feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/ea-sports-fc-27/"
+        },
+        {
+            "id": 545,
+            "nombre": "Echoes of Aincrad Ultimate Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/07/09",
+            "imagen": "/Styles/Images/Juegos/Xbox/546.jpg",
+            "video": "https://www.youtube.com/embed/sEy2cirkJwg?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/echoes-of-aincrad-ultimate-edition/"
+        },
+        {
+            "id": 546,
+            "nombre": "F1 25 2026 Season Edition",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2026/06/03",
+            "imagen": "/Styles/Images/Juegos/Xbox/547.jpg",
+            "video": "https://www.youtube.com/embed/tL2nzLFIcXg?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/f1-25-2026-season-edition/"
+        },
+        {
+            "id": 547,
+            "nombre": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+            "genero": "Rol de Acción-Aventura",
+            "lanzamiento": "2026/06/03",
+            "imagen": "/Styles/Images/Juegos/Xbox/548.jpg",
+            "video": "https://www.youtube.com/embed/q8Ol6dgTIw8?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/final-fantasy-vii-rebirth-digital-deluxe-edition/"
+        },
+        {
+            "id": 548,
+            "nombre": "Forever Skies Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/07/24",
+            "imagen": "/Styles/Images/Juegos/Xbox/549.jpg",
+            "video": "https://www.youtube.com/embed/LaGXUFm7Vtc?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/forever-skies-deluxe-edition/"
+        },
+        {
+            "id": 549,
+            "nombre": "Forza Horizon 6 Premium Edition",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2026/05/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/550.jpg",
+            "video": "https://www.youtube.com/embed/pWw-UENvdTw?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/forza-horizon-6-premium-edition/"
+        },
+        {
+            "id": 550,
+            "nombre": "Gothic 1 Remake",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/06/05",
+            "imagen": "/Styles/Images/Juegos/Xbox/551.jpg",
+            "video": "https://www.youtube.com/embed/n0R7BmfpD7k?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/gothic-1-remake/"
+        },
+        {
+            "id": 551,
+            "nombre": "Halo Campaign Evolved Edición Premium",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2026/07/23",
+            "imagen": "/Styles/Images/Juegos/Xbox/552.jpg",
+            "video": "https://www.youtube.com/embed/0MxBFXH2a_U?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/halo-campaign-evolved-edicion-premium/"
+        },
+        {
+            "id": 552,
+            "nombre": "Invincible VS Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/04/30",
+            "imagen": "/Styles/Images/Juegos/Xbox/553.jpg",
+            "video": "https://www.youtube.com/embed/fq6GtBtYzeA?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/invincible-vs-deluxe-edition/"
+        },
+        {
+            "id": 553,
+            "nombre": "LEGO Batman El Legado del Caballero de la Noche Edición Deluxe",
+            "genero": "Plataformas-Aventura",
+            "lanzamiento": "2026/05/19",
+            "imagen": "/Styles/Images/Juegos/Xbox/554.jpg",
+            "video": "https://www.youtube.com/embed/5CNbF7ql7b8?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/lego-batman-el-legado-del-caballero-de-la-noche-edicion-deluxe/"
+        },
+        {
+            "id": 554,
+            "nombre": "Madden NFL 27 Edición Deluxe y EA SPORTS College Football 27 Edición Deluxe",
+            "genero": "Deportes",
+            "lanzamiento": "2026/07/06",
+            "imagen": "/Styles/Images/Juegos/Xbox/555.jpg",
+            "video": "https://www.youtube.com/embed/-W8XQTbTLdI?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/madden-nfl-27-edicion-deluxe-y-ea-sports-college-football-27-edicion-deluxe/"
+        },
+        {
+            "id": 555,
+            "nombre": "Mixtape",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/07",
+            "imagen": "/Styles/Images/Juegos/Xbox/556.jpg",
+            "video": "https://www.youtube.com/embed/aQoEd5rnxiQ?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/mixtape/"
+        },
+        {
+            "id": 556,
+            "nombre": "Monopoly Star Wars Heroes vs Villains",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/06/30",
+            "imagen": "/Styles/Images/Juegos/Xbox/557.jpg",
+            "video": "https://www.youtube.com/embed/UBaE4K_cUHo?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/monopoly-star-wars-heroes-vs-villains/"
+        },
+        {
+            "id": 557,
+            "nombre": "MotoGP 26",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2026/04/29",
+            "imagen": "/Styles/Images/Juegos/Xbox/558.jpg",
+            "video": "https://www.youtube.com/embed/MtPlXAfGQv8?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/motogp-26/"
+        },
+        {
+            "id": 558,
+            "nombre": "MOUSE P.I. For Hire",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/04/16",
+            "imagen": "/Styles/Images/Juegos/Xbox/559.jpg",
+            "video": "https://www.youtube.com/embed/TX8RCkQg3Gw?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/mouse-p-i-for-hire/"
+        },
+        {
+            "id": 559,
+            "nombre": "NBA THE RUN DELUXE EDITION",
+            "genero": "Deportes",
+            "lanzamiento": "2026/06/09",
+            "imagen": "/Styles/Images/Juegos/Xbox/560.jpg",
+            "video": "https://www.youtube.com/embed/gm0tV6ix63I?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/nba-the-run-deluxe-edition/"
+        },
+        {
+            "id": 560,
+            "nombre": "Nickelodeon Extreme Tennis Next!",
+            "genero": "Deportes",
+            "lanzamiento": "2026/05/28",
+            "imagen": "/Styles/Images/Juegos/Xbox/561.jpg",
+            "video": "https://www.youtube.com/embed/vjDHitqXlTA?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/nickelodeon-extreme-tennis-next/"
+        },
+        {
+            "id": 561,
+            "nombre": "Poppy Playtime Chapter 1 a 5",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/27",
+            "imagen": "/Styles/Images/Juegos/Xbox/562.jpg",
+            "video": "https://www.youtube.com/embed/BA71rEAToDw?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/poppy-playtime-chapter-1-a-5/"
+        },
+        {
+            "id": 562,
+            "nombre": "PRAGMATA Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/04/17",
+            "imagen": "/Styles/Images/Juegos/Xbox/563.jpg",
+            "video": "https://www.youtube.com/embed/9A79Noo3JM0?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/pragmata-deluxe-edition/"
+        },
+        {
+            "id": 563,
+            "nombre": "Pro Evolution Soccer 2021 eFootball Season Update",
+            "genero": "Deportes",
+            "lanzamiento": "2020/09/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/564.jpg",
+            "video": "https://www.youtube.com/embed/GSXViWOyEO4?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/pro-evolution-soccer-2021-efootball-season-update/"
+        },
+        {
+            "id": 564,
+            "nombre": "REPLACED",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/04/14",
+            "imagen": "/Styles/Images/Juegos/Xbox/565.jpg",
+            "video": "https://www.youtube.com/embed/Egkzeiy6yp8?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/replaced/"
+        },
+        {
+            "id": 565,
+            "nombre": "R-Type Dimensions III",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/18",
+            "imagen": "/Styles/Images/Juegos/Xbox/566.jpg",
+            "video": "https://www.youtube.com/embed/bXOKxxPsUvs?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/r-type-dimensions-iii/"
+        },
+        {
+            "id": 566,
+            "nombre": "The Adventures of Elliot The Millennium Tales",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/06/18",
+            "imagen": "/Styles/Images/Juegos/Xbox/567.jpg",
+            "video": "https://www.youtube.com/embed/x3SZlzcwa-0?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/the-adventures-of-elliot-the-millennium-tales/"
+        },
+        {
+            "id": 567,
+            "nombre": "The Mound Omen of Cthulhu Deluxe Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/07/15",
+            "imagen": "/Styles/Images/Juegos/Xbox/568.jpg",
+            "video": "https://www.youtube.com/embed/oxItuu90xVI?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/the-mound-omen-of-cthulhu-deluxe-edition/"
+        },
+        {
+            "id": 568,
+            "nombre": "Tour de France 2026 Deluxe Edition",
+            "genero": "Carreras-Deportes",
+            "lanzamiento": "2026/06/04",
+            "imagen": "/Styles/Images/Juegos/Xbox/569.jpg",
+            "video": "https://www.youtube.com/embed/wO913qq79g4?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/tour-de-france-2026-deluxe-edition/"
+        },
+        {
+            "id": 569,
+            "nombre": "UFC 6 Ultimate Edition",
+            "genero": "Lucha-Deportes",
+            "lanzamiento": "2026/06/12",
+            "imagen": "/Styles/Images/Juegos/Xbox/570.jpg",
+            "video": "https://www.youtube.com/embed/T2MP_T2e-aU?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/ufc-6-ultimate-edition/"
+        },
+        {
+            "id": 570,
+            "nombre": "WILL Follow The Light",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/05/07",
+            "imagen": "/Styles/Images/Juegos/Xbox/571.jpg",
+            "video": "https://www.youtube.com/embed/AUy_zhHrbyQ?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/will-follow-the-light/"
+        },
+        {
+            "id": 571,
+            "nombre": "Battlefield 2042 Gold Edition",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2021/11/19",
+            "imagen": "/Styles/Images/Juegos/Xbox/572.jpg",
+            "video": "https://www.youtube.com/embed/ASzOzrB-a9E?start=19&feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/battlefield-2042-gold-edition/"
+        },
+        {
+            "id": 572,
+            "nombre": "Life is Strange True Colors",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2021/09/10",
+            "imagen": "/Styles/Images/Juegos/Xbox/573.jpg",
+            "video": "https://www.youtube.com/embed/ASzOzrB-a9E?start=19&feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/life-is-strange-true-colors/"
+        },
+        {
+            "id": 573,
+            "nombre": "DRAGON BALL Sparking! ZERO Edición Legendaria",
+            "genero": "Peleas-Acción",
+            "lanzamiento": "2026/07/30",
+            "imagen": "/Styles/Images/Juegos/Xbox/574.jpg",
+            "video": "https://www.youtube.com/embed/q03Gzk-fdUM?feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/dragon-ball-sparking-zero-edicion-legendaria/"
+        },
+        {
+            "id": 574,
+            "nombre": "Grand Theft Auto VI Ultimate Edition",
+            "genero": "Acción-Aventura-Disparos",
+            "lanzamiento": "2026/11/19",
+            "imagen": "/Styles/Images/Juegos/Xbox/575.jpg",
+            "video": "https://www.youtube.com/embed/VQRLujxTm3c?start=35&feature=oembed",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/grand-theft-auto-vi-ultimate-edition/"
+        },
+        {
+            "id": 575,
+            "nombre": "Mortal Shell II Devout Edition",
+            "genero": "Acción-Aventura",
+            "lanzamiento": "2026/08/17",
+            "imagen": "/Styles/Images/Juegos/Xbox/576.jpg",
+            "video": "https://www.youtube.com/embed/uDuf-im3stk?feature=oembed",
+            "precio": "$30.000",
+            "url_producto": "https://statefoxgames.com/product/mortal-shell-ii-devout-edition/"
+        },
+        {
+            "id": 576,
+            "nombre": "Hell Let Loose Vietnam Deluxe Edition",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2026/08/13",
+            "imagen": "/Styles/Images/Juegos/Xbox/577.jpg",
+            "video": "https://www.youtube.com/embed/FQ6QR3y3WSg?feature=oembed",
+            "precio": "$35.000",
+            "url_producto": "https://statefoxgames.com/product/hell-let-loose-vietnam-deluxe-edition/"
         }
     ],
     "playstation": [
