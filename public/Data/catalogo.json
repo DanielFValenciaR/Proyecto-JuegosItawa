@@ -5747,6 +5747,26 @@
             "video": "https://www.youtube.com/embed/FQ6QR3y3WSg?feature=oembed",
             "precio": "$35.000",
             "url_producto": "https://statefoxgames.com/product/hell-let-loose-vietnam-deluxe-edition/"
+        },
+        {
+            "id": 577,
+            "nombre": "Call of Duty Modern Warfare 4",
+            "genero": "Shooter primera persona",
+            "lanzamiento": "2026/10/23",
+            "imagen": "/Styles/Images/Juegos/Xbox/578.jpg",
+            "video": "https://www.youtube.com/embed/NMZzsjhfkE8?si=b2x0zdbDTJ_vyGvQ",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/call-of-duty-modern-warfare-4/"
+        },
+        {
+            "id": 578,
+            "nombre": "NBA 2K27 Edición Deluxe",
+            "genero": "Deportes",
+            "lanzamiento": "2026/08/26",
+            "imagen": "/Styles/Images/Juegos/Xbox/579.jpg",
+            "video": "https://www.youtube.com/embed/vQ2jNNbh1TU?si=VG50UVgv5_baoK8V",
+            "precio": "$40.000",
+            "url_producto": "https://statefoxgames.com/product/nba-2k27-edicion-deluxe/"
         }
     ],
     "playstation": [
