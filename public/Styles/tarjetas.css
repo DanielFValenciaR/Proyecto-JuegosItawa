@@ -93,6 +93,27 @@
     border: 1px solid rgba(255, 255, 255, 0.08); /* Borde súper sutil */
 }
 
+/* =========================================
+    AJUSTES EXCLUSIVOS PARA PLAYSTATION
+========================================= */
+.card .back.play iframe {
+    margin-bottom: 0; /* Quitamos el empuje automático solo en Play */
+}
+
+.card .back.play .details-container {
+    margin-top: 15px; 
+    flex-grow: 1; /* Ocupa el enorme espacio sobrante */
+}
+
+.card .back.play ul {
+    padding: 10px 15px; 
+    flex-grow: 1; /* La caja oscura se estira para absorber el vacío azul */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribuye el Género y Lanzamiento simétricamente */
+}
+
+
 .card .back li {
     margin-bottom: 4px; /* Textos más compactos */
     font-size: 13.5px;
@@ -145,6 +166,18 @@
 
 .card .face.back.play {
     background-color: #0070D1;
+}
+
+/* =========================================
+    Botón WhatsApp exclusivo para PlayStation
+========================================= */
+.card .face.back.play .btn-whatsapp-card {
+    background-color: #ffffff; /* Fondo blanco para resaltar sobre el azul */
+    color: #0070D1 !important; /* Texto y emoji en azul PlayStation */
+}
+
+.card .face.back.play .btn-whatsapp-card:hover {
+    background-color: #e6e6e6; /* Blanco grisáceo al pasar el mouse */
 }
 
 /* .card-game .face.back.xbox {

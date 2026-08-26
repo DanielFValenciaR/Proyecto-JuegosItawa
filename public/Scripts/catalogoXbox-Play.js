@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <ul>
                                 <li><b>Género: </b>${juego.genero}</li>
                                 <li><b>Lanzamiento: </b>${fechaTexto}</li>
-                                <li><b>Precio: </b>${juego.precio}</li>
+                                ${juego.precio ? `<li><b>Precio: </b>${juego.precio}</li>` : ''}
                             </ul>
                             <a href="${linkWpp}" target="_blank" class="btn-whatsapp-card">
                                 📲 Pedir por WhatsApp

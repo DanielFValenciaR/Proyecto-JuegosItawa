@@ -30,7 +30,13 @@
                                 <ul>
                                     <li><b>Género: </b><%= game.genero %></li>
                                     <li><b>Lanzamiento: </b><%= new Date(game.lanzamiento).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) %></li>
+                                    <% if (game.precio) { %>
+                                        <li><b>Precio: </b><%= game.precio %></li>
+                                    <% } %>
                                 </ul>
+                                <a href="https://wa.me/573206976330?text=<%= encodeURIComponent('Hola *Juegos Itawa*, me gustaría recibir información sobre el siguiente juego: *' + game.nombre + '*') %>" target="_blank" class="btn-whatsapp-card">
+                                    📲 Pedir por WhatsApp
+                                </a>
                             </div>
                         </div>
                     </section>
